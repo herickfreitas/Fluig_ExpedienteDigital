@@ -1,0 +1,125 @@
+<html>
+
+<head>
+
+	<title>Expediente digital</title>
+
+	<meta http-equiv="Content-Language" content="pt-br">
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="custom.js"></script>
+	<script src="/webdesk/vcXMLRPC.js"></script>
+
+
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="formExpedienteDigital" role="form">
+			<div class="fluig-style-guide">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2 class="panel-title">DESPACHOS E ENCAMINHAMENTOS</h2>
+					</div>
+
+					<div class="panel-body">
+						<div class="container-fluid">
+							<div class="alert alert-danger" id="error" role="alert" style="display:none"></div>
+							<input type='hidden' name='solicitante' id='solicitante' />
+							<input type='hidden' name='gestorAnterior' id='gestorAnterior' />
+							<input type='hidden' name='dataSolicitacao' id='dataSolicitacao' />
+							<input type='hidden' name='identificadorFluig' id='identificadorFluig' />
+
+
+				
+					<div class="row form-group" id="dvGestor">
+						<div class="panel-body">
+							<div class="alert alert alert-warning" role="alert">
+								<strong>Atenção!!</strong> Somente um Gestor deve iniciar um expediente digital. <br>
+								Neste caso, selecione um Gestor ou um Colaborador subordinado para direcionar o expediente.
+							</div>
+						</div>
+						<div class="col-xs-6 col-md-6"> 
+						<label class="control-label" id="lblGestor">Selecione um Gestor</label>
+							<input  type="zoom"
+							id = "gestor"
+							name="gestor"
+							data-zoom="{
+										'displayKey':'CODUSUARIO_CHEFE',
+										'datasetId':'_RM_GESTORES',
+										'maximumSelectionLength':'1',
+										'fields':[
+											{
+											'field':'CHEFE',  
+											'label':'Gestor',
+											'standard':'true'
+											},{
+											'field':'CODUSUARIO_CHEFE',
+											'label':'Cod usuario'
+											}
+										]
+									}"
+									/>
+						</div>
+
+						<div class="col-xs-6 col-md-6"> 
+						<label class="control-label" id="lblColaborador">Selecione um Colaborador subordinado </label>
+							<input  type="zoom"
+							id = "colaborador"
+							name="colaborador"
+							data-zoom="{
+										'displayKey':'CODUSUARIO',
+										'datasetId':'_RM_COLABORADORES',
+										'maximumSelectionLength':'1',
+										'fields':[
+											{
+											'field':'COLABORADOR',  
+											'label':'Colaborador',
+											'standard':'true'
+											},{
+											'field':'CODUSUARIO',
+											'label':'Cod usuario'
+											}
+										]
+									}"
+									/>
+						</div>
+					</div>
+
+
+
+					<br><br>
+					
+
+							<div class="row form-group">
+								<div class="col-xs-12 col-md-12">
+									<label class="control-label" id="lblAssunto">Assunto</label>
+									<input class="form-control" type="text" name="assunto" id="assunto" />
+								</div>
+							</div>
+
+							<div class="row form-group">
+								<div class="col-xs-12 col-md-12">
+									<label class="control-label" id="lblDescricao">Descrição</label>
+									<textarea class="form-control" rows="30" name="descricao" id="descricao"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</form>
+			<script>
+				// Filtro para retornar no zoom os colaboradores relacionados ao gestor logado.
+				//filtrazoom();
+
+			</script>
+
+	</div>
+</body>
+
+</html>
