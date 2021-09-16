@@ -32,7 +32,7 @@ function displayFields(form,customHTML){
 	        }
 	        
 	    }
-	    
+  
 	}
 	
 	else if ((activity == etapaColaborador) || (activity == etapaProcessamento)) {

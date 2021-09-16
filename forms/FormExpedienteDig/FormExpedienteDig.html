@@ -48,7 +48,7 @@
 							id = "gestor"
 							name="gestor"
 							data-zoom="{
-										'displayKey':'CODUSUARIO_CHEFE',
+										'displayKey':'CODUSUARIOCHEFE',
 										'datasetId':'_RM_GESTORES',
 										'maximumSelectionLength':'1',
 										'fields':[
@@ -57,7 +57,7 @@
 											'label':'Gestor',
 											'standard':'true'
 											},{
-											'field':'CODUSUARIO_CHEFE',
+											'field':'CODUSUARIOCHEFE',
 											'label':'Cod usuario'
 											}
 										]
@@ -68,8 +68,8 @@
 						<div class="col-xs-6 col-md-6"> 
 						<label class="control-label" id="lblColaborador">Selecione um Colaborador subordinado </label>
 							<input  type="zoom"
-							id = "colaborador"
-							name="colaborador"
+							id = "zoomColaborador"
+							name="zoomColaborador"
 							data-zoom="{
 										'displayKey':'CODUSUARIO',
 										'datasetId':'_RM_COLABORADORES',
@@ -114,8 +114,13 @@
 
 		</form>
 			<script>
-				// Filtro para retornar no zoom os colaboradores relacionados ao gestor logado.
-				//filtrazoom();
+				// Filtro para retornar no zoom os colaboradores relacionados ao Gestor.
+				var gestorAnterior = document.getElementById("gestorAnterior").value; 
+				console.log("Form gestorAnterior: "+gestorAnterior);
+				if (gestorAnterior != "") {
+					filtrazoom();
+				}
+				
 
 			</script>
 

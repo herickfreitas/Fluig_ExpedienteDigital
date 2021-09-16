@@ -1,14 +1,11 @@
-
-/*
-function filtrazoom(gestor) {
+function filtrazoom() {
 	
+	var gestorAnterior 	= document.getElementById("gestorAnterior").value; 
+	console.log("gestorAnterior: "+ gestorAnterior);
 	
-	var usuarioChefe = fluigAPI.getUserService().getCurrent().getLogin();
-	console.log("usuarioChefe: "+ usuarioChefe);
-	
-	var filterValues = "CODUSUARIO_CHEFE," + usuarioChefe;
+	var filterValues = "CODUSUARIO_CHEFE," + gestorAnterior;
 	console.log("filterValues: "+ filterValues);
-
-	reloadZoomFilterValues('colaborador', filterValues);
+	
+	reloadZoomFilterValues('zoomColaborador', filterValues);
+	
 }
-*/

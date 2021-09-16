@@ -9,7 +9,7 @@ function createDataset(fields, constraints, sortFields) {
     
 
     //var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+processo+"' order by 1";
-    var myQuery = "SELECT DISTINCT CODUSUARIO_CHEFE, CHEFE FROM _Fluig_Colaboradores";
+    var myQuery = "SELECT DISTINCT CODUSUARIO_CHEFE as CODUSUARIOCHEFE, CHEFE FROM _Fluig_Colaboradores";
     log.info("QUERY _RM_GESTORES: " + myQuery);
     try {
         var conn = ds.getConnection();

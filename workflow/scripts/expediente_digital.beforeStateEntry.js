@@ -37,6 +37,9 @@ function GestorWorkflow() {
 		log.info("==========[ GestorWorkflow - Expediente Digital - gestor ]=========="+gestor);
 		log.info("==========[ GestorWorkflow - Expediente Digital - gestorAnterior ]=========="+gestorAnterior);
 		
+		//Limpando campo colaborador
+		hAPI.setCardValue("zoomColaborador", "");
+		
 		if (gestor != gestorAnterior) {
 
 			hAPI.setCardValue("gestorAnterior", gestor);

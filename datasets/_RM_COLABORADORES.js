@@ -15,15 +15,8 @@ function createDataset(fields, constraints, sortFields) {
     }
 
 
-    if (processo == "")
-    	{
-    	var myQuery = "SELECT * FROM _Fluig_Colaboradores order by 1";
-    	}
-    else
-    	{
-    	var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+processo+"' order by 1";
-    	}
-    
+    //var myQuery = "SELECT * FROM _Fluig_Colaboradores order by 1";
+    var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+processo+"' order by 1";
     log.info("QUERY _Fluig_COLABORADORES: " + myQuery);
     try {
         var conn = ds.getConnection();

@@ -11,11 +11,11 @@ function validateForm(form){
 		var msg = "";
 		var hasErros = false;
 		
-		if (form.getValue('gestor') == "" && form.getValue('colaborador') == ""){
+		if (form.getValue('gestor') == "" && form.getValue('zoomColaborador') == ""){
 			msg += "Selecione um Gestor ou um Colaborador subordinado.\n";
 			var hasErros = true;
 			}
-		if (form.getValue('gestor') != "" && form.getValue('colaborador') != ""){
+		if (form.getValue('gestor') != "" && form.getValue('zoomColaborador') != ""){
 			msg += "Selecione um Gestor ou um Colaborador subordinado.\n";
 			var hasErros = true;
 			}
