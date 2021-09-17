@@ -1,11 +1,17 @@
-function filtrazoom() {
+function filtrazoom(usuarioLogado) {
 	
-	var gestorAnterior 	= document.getElementById("gestorAnterior").value; 
-	console.log("gestorAnterior: "+ gestorAnterior);
+	var gestorLogado = usuarioLogado; 
+	var gestorAnterior = document.getElementById("gestorAnterior").value; 
+	console.log("gestorAnterior: "+ gestorLogado);
 	
-	var filterValues = "CODUSUARIO_CHEFE," + gestorAnterior;
-	console.log("filterValues: "+ filterValues);
-	
-	reloadZoomFilterValues('zoomColaborador', filterValues);
-	
+	if (gestorAnterior == "") {
+		var filterValues = "CODUSUARIO_CHEFE," + gestorLogado;
+		console.log("filterValues: "+ filterValues);
+	}
+	else {
+		var filterValues = "CODUSUARIO_CHEFE," + gestorAnterior;
+		console.log("filterValues: "+ filterValues);
+	}
+
+	reloadZoomFilterValues('colaborador', filterValues);
 }

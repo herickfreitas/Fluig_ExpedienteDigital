@@ -12963,6 +12963,19 @@
        <int>1</int>
       </void>
       <void property="processDescription">
+       <string>Expediente Digital</string>
+      </void>
+      <void property="processId">
+       <string>expediente_digital1</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.ProcessDefinitionDto">
+      <void property="companyId">
+       <int>1</int>
+      </void>
+      <void property="processDescription">
        <string>Borderô de Pagamento</string>
       </void>
       <void property="processId">

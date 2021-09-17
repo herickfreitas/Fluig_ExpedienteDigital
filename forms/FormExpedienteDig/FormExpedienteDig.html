@@ -33,7 +33,6 @@
 							<input type='hidden' name='dataSolicitacao' id='dataSolicitacao' />
 							<input type='hidden' name='identificadorFluig' id='identificadorFluig' />
 
-
 				
 					<div class="row form-group" id="dvGestor">
 						<div class="panel-body">
@@ -42,51 +41,54 @@
 								Neste caso, selecione um Gestor ou um Colaborador subordinado para direcionar o expediente.
 							</div>
 						</div>
+						
 						<div class="col-xs-6 col-md-6"> 
-						<label class="control-label" id="lblGestor">Selecione um Gestor</label>
-							<input  type="zoom"
-							id = "gestor"
-							name="gestor"
-							data-zoom="{
-										'displayKey':'CODUSUARIOCHEFE',
-										'datasetId':'_RM_GESTORES',
-										'maximumSelectionLength':'1',
-										'fields':[
-											{
-											'field':'CHEFE',  
-											'label':'Gestor',
-											'standard':'true'
-											},{
-											'field':'CODUSUARIOCHEFE',
-											'label':'Cod usuario'
-											}
-										]
-									}"
-									/>
+							<label class="control-label" id="lblGestor">Selecione um Gestor</label>
+								<input  type="zoom"
+								id = "gestor"
+								name="gestor"
+								data-zoom="{
+											'displayKey':'CODUSUARIOCHEFE',
+											'datasetId':'_RM_GESTORES',
+											'maximumSelectionLength':'1',
+											'fields':[
+												{
+												'field':'CHEFE',  
+												'label':'Gestor',
+												'standard':'true'
+												},{
+												'field':'CODUSUARIOCHEFE',
+												'label':'Cod usuario'
+												}
+											]
+										}"
+										/>
 						</div>
-
+						
 						<div class="col-xs-6 col-md-6"> 
-						<label class="control-label" id="lblColaborador">Selecione um Colaborador subordinado </label>
-							<input  type="zoom"
-							id = "zoomColaborador"
-							name="zoomColaborador"
+						<label class="control-label" id="lblcolaborador">Selecione um Colaborador subordinado </label>
+						<input 
+							type="zoom"
+							id = "colaborador"
+							name="colaborador"
 							data-zoom="{
-										'displayKey':'CODUSUARIO',
-										'datasetId':'_RM_COLABORADORES',
-										'maximumSelectionLength':'1',
-										'fields':[
-											{
-											'field':'COLABORADOR',  
-											'label':'Colaborador',
-											'standard':'true'
-											},{
-											'field':'CODUSUARIO',
-											'label':'Cod usuario'
-											}
-										]
-									}"
-									/>
+								'displayKey':'CODUSUARIO',
+								'datasetId':'_RM_COLABORADORES',
+								'maximumSelectionLength':'1',
+								'fields':[
+									{
+									  'field':'COLABORADOR',
+									  'label':'COLABORADOR'
+									},{
+									  'field':'CODUSUARIO',
+									  'label':'CODUSUARIO',
+									  'standard':'true'
+									}
+								]
+							}"
+						/>
 						</div>
+						
 					</div>
 
 
@@ -114,13 +116,38 @@
 
 		</form>
 			<script>
-				// Filtro para retornar no zoom os colaboradores relacionados ao Gestor.
-				var gestorAnterior = document.getElementById("gestorAnterior").value; 
-				console.log("Form gestorAnterior: "+gestorAnterior);
-				if (gestorAnterior != "") {
-					filtrazoom();
-				}
+				// carrega o form com um timeout  
+				$(document).ready(function () {
+					setTimeout(function () {
+						LoadForm();
+						$('#loading').hide();
+					}, 500);
+					});
 				
+			    function LoadForm() {
+      				try {
+
+							// Filtro para retornar no zoom os colaboradores relacionados ao Gestor.
+							var gestorAnterior = document.getElementById("gestorAnterior").value; 
+							console.log("Form gestorAnterior: "+gestorAnterior);
+
+				
+							// capturando usuario logado
+							var wcmapi = parent.WCMAPI;
+							var usuarioLogado = wcmapi.getUserCode();
+							console.log("Form usuarioLogado: "+usuarioLogado);
+
+
+							// Filtando itens
+							//recarregazoom(gestorAnterior,usuarioLogado);
+							filtrazoom(usuarioLogado)
+
+						} 
+					catch (e) {
+							$('#error').show();
+							$('#error').html("Erro: " + e.message);
+						}
+					}
 
 			</script>
 

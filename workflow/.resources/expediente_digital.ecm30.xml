@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>60</version>
+      <version>136</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -165,7 +165,7 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>Campo Formulário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;zoomColaborador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;colaborador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -333,12 +333,12 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>60</version>
+        <version>136</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition></condition>
       <destinationSequenceId>9</destinationSequenceId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;zoomColaborador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;colaborador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <engineAllocationId>Campo Formulário</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
@@ -347,7 +347,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>60</version>
+        <version>136</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition></condition>
@@ -566,7 +566,7 @@ function GestorWorkflow() {&#xd;
 		log.info(&quot;==========[ GestorWorkflow - Expediente Digital - gestorAnterior ]==========&quot;+gestorAnterior);&#xd;
 		&#xd;
 		//Limpando campo colaborador&#xd;
-		hAPI.setCardValue(&quot;zoomColaborador&quot;, &quot;&quot;);&#xd;
+		hAPI.setCardValue(&quot;colaborador&quot;, &quot;&quot;);&#xd;
 		&#xd;
 		if (gestor != gestorAnterior) {&#xd;
 &#xd;
@@ -675,7 +675,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>60</version>
+        <version>136</version>
         <linkSequence>15</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -686,7 +686,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>60</version>
+        <version>136</version>
         <linkSequence>26</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -697,7 +697,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>60</version>
+        <version>136</version>
         <linkSequence>26</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -708,7 +708,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>60</version>
+        <version>136</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -719,7 +719,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>60</version>
+        <version>136</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -748,7 +748,7 @@ function ProcessamentoWorkflow(){&#xd;
       <sequence>22</sequence>
       <expressionOrder>2</expressionOrder>
       <ruleOrder>1</ruleOrder>
-      <field>zoomColaborador</field>
+      <field>colaborador</field>
       <value></value>
       <operator>0</operator>
       <valueType>0</valueType>

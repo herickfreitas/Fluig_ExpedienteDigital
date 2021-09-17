@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER OFF
 GO
 
-
+/*	CHEFE.NOME AS CHEFE não atualizado em produção */
 
 
 
