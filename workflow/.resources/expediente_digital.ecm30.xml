@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>136</version>
+      <version>208</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -78,7 +78,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>30</positionX>
-      <positionY>18</positionY>
+      <positionY>60</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -181,7 +181,7 @@
       <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>640</positionX>
-      <positionY>78</positionY>
+      <positionY>80</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -232,8 +232,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>110</positionX>
-      <positionY>8</positionY>
+      <positionX>100</positionX>
+      <positionY>10</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -308,8 +308,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>510</positionX>
-      <positionY>348</positionY>
+      <positionX>550</positionX>
+      <positionY>280</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -333,10 +333,10 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>136</version>
+        <version>208</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
-      <condition></condition>
+      <condition>false</condition>
       <destinationSequenceId>9</destinationSequenceId>
       <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;colaborador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <engineAllocationId>Campo Formulário</engineAllocationId>
@@ -347,10 +347,10 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>136</version>
+        <version>208</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
-      <condition></condition>
+      <condition>false</condition>
       <destinationSequenceId>5</destinationSequenceId>
       <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;gestor&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <engineAllocationId>Campo Formulário</engineAllocationId>
@@ -358,23 +358,6 @@
     </ConditionProcessState>
   </list>
   <list>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <linkSequence>15</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>9</initialStateSequence>
-      <finalStateSequence>5</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name>Retorno</name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
     <ProcessLink>
       <processLinkPK>
         <companyId>1</companyId>
@@ -494,31 +477,26 @@
       <defaultLink>false</defaultLink>
       <type>0</type>
     </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>32</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>22</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
   </list>
   <list/>
   <list>
-    <WorkflowProcessEvent>
-      <workflowProcessEventPK>
-        <companyId>1</companyId>
-        <eventId>beforeTaskSave</eventId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-      </workflowProcessEventPK>
-      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
-	&#xd;
-	var gestor 		= 5; &#xd;
-	var colaborador = 9;&#xd;
-	&#xd;
-    var atividade  = getValue(&quot;WKNumState&quot;);&#xd;
-    var comentario = getValue(&quot;WKUserComment&quot;); &#xd;
-&#xd;
-    if (atividade == gestor || atividade == colaborador) {&#xd;
-        if (comentario == &quot;&quot;) {&#xd;
-            throw &quot;Obrigatório informar um Complemento.&quot;&#xd;
-        }&#xd;
-    }&#xd;
-}</eventDescription>
-    </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
@@ -529,6 +507,9 @@
       <eventDescription>var SeqProcessamento = 28;&#xd;
 var SeqColaborador = 9;&#xd;
 var SeqGestor = 5;&#xd;
+var SeqGateway = 22;&#xd;
+var SeqFinalizar = 11;&#xd;
+&#xd;
 &#xd;
 function beforeStateEntry(sequenceId){&#xd;
 	&#xd;
@@ -538,6 +519,9 @@ function beforeStateEntry(sequenceId){&#xd;
     if (sequenceId == SeqProcessamento) {&#xd;
     	ProcessamentoWorkflow();&#xd;
     }&#xd;
+    else if (sequenceId == SeqGateway || sequenceId == SeqFinalizar) {&#xd;
+    	ComplementoHistorico();&#xd;
+    }&#xd;
     else if (sequenceId == SeqColaborador) {&#xd;
     	ColaboradorWorkflow();&#xd;
     }&#xd;
@@ -545,6 +529,80 @@ function beforeStateEntry(sequenceId){&#xd;
     	GestorWorkflow();&#xd;
     }&#xd;
     &#xd;
+}&#xd;
+&#xd;
+&#xd;
+&#xd;
+//////////////////////////////////////////&#xd;
+//FUNCAO PARA FORMATAR DATA E HORA  	//&#xd;
+//////////////////////////////////////////&#xd;
+&#xd;
+function dataAtualFormatada(){&#xd;
+var hoje = new Date();&#xd;
+var dd = hoje.getDate();&#xd;
+var mm = hoje.getMonth()+1;&#xd;
+var aaaa = hoje.getFullYear();&#xd;
+var horas = hoje.getHours();&#xd;
+var minutos = hoje.getMinutes();&#xd;
+var segundos = hoje.getSeconds();&#xd;
+if(dd&lt;10){dd=&apos;0&apos;+dd}&#xd;
+if(mm&lt;10){mm=&apos;0&apos;+mm}&#xd;
+if(horas&lt;10){horas=&apos;0&apos;+horas}&#xd;
+if(minutos&lt;10){minutos=&apos;0&apos;+minutos}&#xd;
+if(segundos&lt;10){segundos=&apos;0&apos;+segundos}&#xd;
+return dd +&apos;/&apos;+ mm +&apos;/&apos;+ aaaa +&apos; - &apos;+ horas +&apos;:&apos;+ minutos;&#xd;
+}	&#xd;
+&#xd;
+&#xd;
+//////////////////////////////////////////////////////&#xd;
+//FUNCAO RETORNA O NOME COMPLETO CONFORME LOGIN 	//&#xd;
+//////////////////////////////////////////////////////&#xd;
+&#xd;
+function nomeCompleto(login){&#xd;
+var usuario = login;&#xd;
+var datasetRetorno = DatasetFactory.getDataset(&quot;colleague&quot;, null, null, null); // Buscando Gestor de acordo com o colaborador&#xd;
+for (var i = 0; i &lt; datasetRetorno.rowsCount; i++) {&#xd;
+var usuario_fluig = datasetRetorno.getValue(i, &quot;login&quot;); &#xd;
+if (usuario_fluig == usuario){&#xd;
+var name_fluig = (datasetRetorno.getValue(i, &quot;colleagueName&quot;)).toUpperCase(); &#xd;
+}&#xd;
+}&#xd;
+return name_fluig;&#xd;
+}	&#xd;
+&#xd;
+&#xd;
+&#xd;
+&#xd;
+function ComplementoHistorico() {&#xd;
+	try{&#xd;
+		&#xd;
+		//////////////////////////////////////////////////////////////////////////&#xd;
+        //		MOVIMENTANDO CONTEÚDO DE DESPACHO PARA DESPACHO HISTORICO		//&#xd;
+		//////////////////////////////////////////////////////////////////////////	&#xd;
+		var userLogado = getValue(&quot;WKUser&quot;);					// Recupera o usuário corrente associado a atividade&#xd;
+		var despacho 		= hAPI.getCardValue(&quot;despacho&quot;);&#xd;
+		&#xd;
+		if (despacho != &quot;&quot;){&#xd;
+			&#xd;
+			var nome_Completo 		= nomeCompleto(userLogado);&#xd;
+			var quebraLinha			= &quot;\n \n ********************************************************************************************************************************************************************************** \n \n &quot;;&#xd;
+			var historicoDespacho 	= hAPI.getCardValue(&quot;historicoDespacho&quot;);&#xd;
+			// Formatando&#xd;
+			var dataFormatada = dataAtualFormatada(); &#xd;
+			var concatenando = &apos;Colaborador(a): &apos;+nome_Completo+&apos; \n Data: &apos;+dataFormatada+&apos; \n Despacho: &apos;+despacho;&#xd;
+			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - historicoDespacho - ColaboradorWorkflow - concatenando ]========== &quot;+concatenando);&#xd;
+			hAPI.setCardValue(&quot;historicoDespacho&quot;, concatenando + quebraLinha + historicoDespacho);&#xd;
+			&#xd;
+			// Esvaziando campo despacho&#xd;
+			hAPI.setCardValue(&quot;despacho&quot;, &quot;&quot;);&#xd;
+		}&#xd;
+		&#xd;
+	}&#xd;
+	catch (e)&#xd;
+	{&#xd;
+		log.error(e);&#xd;
+		throw e;&#xd;
+	}&#xd;
 }&#xd;
 &#xd;
 &#xd;
@@ -603,6 +661,9 @@ function ColaboradorWorkflow() {&#xd;
 		var gestor 				= hAPI.getCardValue(&quot;gestor&quot;);&#xd;
 		var gestorAnterior 		= hAPI.getCardValue(&quot;gestorAnterior&quot;);&#xd;
 		&#xd;
+		//Limpando campo colaborador&#xd;
+		hAPI.setCardValue(&quot;colaborador&quot;, &quot;&quot;);&#xd;
+		&#xd;
 		if (gestor == &quot;&quot;) {&#xd;
 			hAPI.setCardValue(&quot;gestor&quot;, gestorAnterior);&#xd;
 		}&#xd;
@@ -630,15 +691,59 @@ function ProcessamentoWorkflow(){&#xd;
 		var processo = getValue(&quot;WKNumProces&quot;);     			// Recupera o numero da solicitação&#xd;
 		var solicitante = getValue(&quot;WKUser&quot;);					// Recupera o usuário corrente associado a atividade&#xd;
 		var today = new Date().toISOString().slice(0,10);		// Capturando e formatando data corrente Ex: &apos;2021-09-15&apos;&#xd;
+		var gestorLogado = hAPI.getCardValue(&quot;gestorLogado&quot;);	// true é um gestor logado, false não é um, gestor logado&#xd;
+		var nome_Completo = nomeCompleto(solicitante);			// Função retorna o nome completo cadastrado no Fluig&#xd;
 		&#xd;
 		&#xd;
 		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - today ]========== &quot; + today);&#xd;
 		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - identificadorFluig ]========== &quot; + processo);&#xd;
 		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - solicitante ]========== &quot; + solicitante);&#xd;
+		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - gestorLogado ]========== &quot; + gestorLogado);&#xd;
 		hAPI.setCardValue(&quot;dataSolicitacao&quot;, today);&#xd;
 		hAPI.setCardValue(&quot;identificadorFluig&quot;, processo);&#xd;
 		hAPI.setCardValue(&quot;solicitante&quot;, solicitante);&#xd;
-		hAPI.setCardValue(&quot;gestorAnterior&quot;, solicitante);&#xd;
+		&#xd;
+        //////////////////////////////////////////////////////////////////////////&#xd;
+        //		MOVIMENTANDO CONTEÚDO DE DESPACHO PARA DESPACHO HISTORICO		//&#xd;
+		//////////////////////////////////////////////////////////////////////////		&#xd;
+		&#xd;
+		var despacho = hAPI.getCardValue(&quot;despacho&quot;);&#xd;
+		// Formatando&#xd;
+		var dataFormatada = dataAtualFormatada(); &#xd;
+		var concatenando = &apos;Solicitante: &apos;+nome_Completo+&apos; \n Data: &apos;+dataFormatada+&apos; \n Despacho: &apos;+despacho;&#xd;
+		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - historicoDespacho - concatenando ]========== &quot;+concatenando);&#xd;
+		hAPI.setCardValue(&quot;historicoDespacho&quot;, concatenando);&#xd;
+		// Esvaziando campo despacho&#xd;
+		hAPI.setCardValue(&quot;despacho&quot;, &quot;&quot;);&#xd;
+		&#xd;
+		&#xd;
+        //////////////////////////////////////////////////////////&#xd;
+        //		QUANDO FOR UM GESTOR QUE INICIOU O PROCESSO		//&#xd;
+        //////////////////////////////////////////////////////////&#xd;
+		&#xd;
+		if (gestorLogado == &quot;true&quot;) {&#xd;
+			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - IF-ENTROU (gestorLogado == true) ]========== &quot;);&#xd;
+			hAPI.setCardValue(&quot;gestorAnterior&quot;, solicitante);&#xd;
+			}&#xd;
+		&#xd;
+		&#xd;
+        //////////////////////////////////////////////////////////&#xd;
+        //	QUANDO FOR UM COLABORADOR QUE INICIOU O PROCESSO	//&#xd;
+        //////////////////////////////////////////////////////////		&#xd;
+		&#xd;
+		else if (gestorLogado == &quot;false&quot;) {&#xd;
+			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - IF-ENTROU (gestorLogado == false) ]========== &quot;);&#xd;
+			var c1 = DatasetFactory.createConstraint(&quot;CODUSUARIO&quot;, solicitante, solicitante, ConstraintType.MUST);&#xd;
+			var constraints = new Array(c1);&#xd;
+			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - constraints ]========== &quot;+constraints);&#xd;
+			var datasetRetorno = DatasetFactory.getDataset(&quot;_RM_FUNC_FILIAL_CUSTO&quot;, null, constraints, null); // Buscando Gestor de acordo com o colaborador&#xd;
+	        &#xd;
+			for (var i = 0; i &lt; datasetRetorno.rowsCount; i++) {&#xd;
+	        	var codUsuarioChefe = datasetRetorno.getValue(i, &quot;CODUSUARIO_CHEFE&quot;); &#xd;
+	        	log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - codUsuarioChefe ]========== &quot;+codUsuarioChefe);&#xd;
+	        	hAPI.setCardValue(&quot;gestor&quot;, codUsuarioChefe);&#xd;
+				}&#xd;
+			}&#xd;
 		}&#xd;
 	&#xd;
 	catch (e)&#xd;
@@ -646,6 +751,8 @@ function ProcessamentoWorkflow(){&#xd;
 		log.error(e);&#xd;
 		throw e;&#xd;
 	}&#xd;
+&#xd;
+&#xd;
 }</eventDescription>
     </WorkflowProcessEvent>
   </list>
@@ -675,18 +782,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>136</version>
-        <linkSequence>15</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>692</positionX>
-      <positionY>297</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>136</version>
+        <version>208</version>
         <linkSequence>26</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -697,34 +793,67 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>136</version>
+        <version>208</version>
         <linkSequence>26</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
       <positionX>157</positionX>
-      <positionY>118</positionY>
+      <positionY>125</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>136</version>
+        <version>208</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>162</positionX>
-      <positionY>119</positionY>
+      <positionX>153</positionX>
+      <positionY>125</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>136</version>
+        <version>208</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>330</positionX>
       <positionY>41</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>208</version>
+        <linkSequence>32</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>693</positionX>
+      <positionY>372</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>208</version>
+        <linkSequence>32</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>160</positionX>
+      <positionY>372</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>208</version>
+        <linkSequence>32</linkSequence>
+        <bendSequence>3</bendSequence>
+      </processLinkBendPK>
+      <positionX>160</positionX>
+      <positionY>126</positionY>
     </ProcessLinkBend>
   </list>
   <list/>

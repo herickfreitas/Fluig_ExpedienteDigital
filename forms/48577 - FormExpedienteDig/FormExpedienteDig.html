@@ -32,13 +32,16 @@
 							<input type='hidden' name='gestorAnterior' id='gestorAnterior' />
 							<input type='hidden' name='dataSolicitacao' id='dataSolicitacao' />
 							<input type='hidden' name='identificadorFluig' id='identificadorFluig' />
-
+							<input type='hidden' name='gestorLogado' id='gestorLogado' />
+							
+							
 				
 					<div class="row form-group" id="dvGestor">
+						
+						
 						<div class="panel-body">
 							<div class="alert alert alert-warning" role="alert">
-								<strong>Atenção!!</strong> Somente um Gestor deve iniciar um expediente digital. <br>
-								Neste caso, selecione um Gestor ou um Colaborador subordinado para direcionar o expediente.
+								<strong>Atenção!!</strong> Selecione um Gestor ou um Colaborador subordinado para direcionar o expediente.
 							</div>
 						</div>
 						
@@ -48,7 +51,7 @@
 								id = "gestor"
 								name="gestor"
 								data-zoom="{
-											'displayKey':'CODUSUARIOCHEFE',
+											'displayKey':'CODUSUARIO_CHEFE',
 											'datasetId':'_RM_GESTORES',
 											'maximumSelectionLength':'1',
 											'fields':[
@@ -57,7 +60,7 @@
 												'label':'Gestor',
 												'standard':'true'
 												},{
-												'field':'CODUSUARIOCHEFE',
+												'field':'CODUSUARIO_CHEFE',
 												'label':'Cod usuario'
 												}
 											]
@@ -105,10 +108,18 @@
 
 							<div class="row form-group">
 								<div class="col-xs-12 col-md-12">
-									<label class="control-label" id="lblDescricao">Descrição</label>
-									<textarea class="form-control" rows="30" name="descricao" id="descricao"></textarea>
+									<label class="control-label" id="lblDespacho">Despacho</label>
+									<textarea class="form-control" rows="10" name="despacho" id="despacho"></textarea>
 								</div>
 							</div>
+
+							<div class="row form-group">
+								<div class="col-xs-12 col-md-12">
+									<label class="control-label" id="lblHistoricoDespacho">Histórico do Despacho</label>
+									<textarea class="form-control" rows="60" name="historicoDespacho" id="historicoDespacho" readonly></textarea>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -126,24 +137,48 @@
 				
 			    function LoadForm() {
       				try {
+							// Ocultando seleção, será habilitada caso seja um gestor.
+							$('#dvGestor').hide();
+						
 
-							// Filtro para retornar no zoom os colaboradores relacionados ao Gestor.
-							var gestorAnterior = document.getElementById("gestorAnterior").value; 
-							console.log("Form gestorAnterior: "+gestorAnterior);
-
-				
 							// capturando usuario logado
 							var wcmapi = parent.WCMAPI;
 							var usuarioLogado = wcmapi.getUserCode();
-							console.log("Form usuarioLogado: "+usuarioLogado);
+							usuarioLogado = usuarioLogado.toLowerCase();
+							//console.log("Form usuarioLogado: "+usuarioLogado);
+							
+							var gestorLogado = false; // true é um gestor logado, false não é um, gestor logado
+							
+							var datasetGestor = DatasetFactory.getDataset("_RM_GESTORES", null, null, null); // Buscando dataset gestores
+							var records = datasetGestor.values; // Gravando valores de retorno
 
-
-							// Filtando itens
-							//recarregazoom(gestorAnterior,usuarioLogado);
-							filtrazoom(usuarioLogado)
-
-						} 
-					catch (e) {
+							var gestorRetornado = "";
+							for (var index in records) {
+								var record = records[index];
+								gestorRetornado = record.CODUSUARIO_CHEFE;
+								//Verificando se usuário logado foi retornado na busca
+								if (usuarioLogado == gestorRetornado) {
+									gestorLogado = true;
+									//console.log(" IF ENTROU: usuarioLogado == gestorRetornado ");
+									}
+							}
+							
+							if (gestorLogado == true) {
+								console.log(" IF ENTROU: gestorLogado == true ");
+								$("#gestorLogado").val(true);
+								// Habilitando seleção para gestores
+								$('#dvGestor').show();
+								// Filtrando colaboradores
+								filtrazoom(usuarioLogado);
+								
+							}
+							else if (gestorLogado == false) {
+								$("#gestorLogado").val(false);
+							}
+						
+						}
+					
+							catch (e) {
 							$('#error').show();
 							$('#error').html("Erro: " + e.message);
 						}
