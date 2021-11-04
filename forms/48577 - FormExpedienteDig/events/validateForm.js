@@ -19,11 +19,11 @@ function validateForm(form){
 	if ((activity == inicioPadrao || activity == inicio) && gestorLogado == "true") {
 
 		if (form.getValue('gestor') == "" && form.getValue('colaborador') == ""){
-			msg += "Selecione um Gestor ou um Colaborador subordinado.\n";
+			msg += "Selecione um Gestor ou um Empregado subordinado.\n";
 			var hasErros = true;
 			}
 		if (form.getValue('gestor') != "" && form.getValue('colaborador') != ""){
-			msg += "Selecione um Gestor ou um Colaborador subordinado.\n";
+			msg += "Selecione um Gestor ou um Empregado subordinado.\n";
 			var hasErros = true;
 			}
 		if (form.getValue('assunto') == ""){

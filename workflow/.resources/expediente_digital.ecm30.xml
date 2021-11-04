@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>208</version>
+      <version>209</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -157,8 +157,8 @@
         <version>1</version>
         <sequence>9</sequence>
       </processStatePK>
-      <stateName>Colaborador - Complementar expediente</stateName>
-      <stateDescription>Colaborador - Complementar expediente</stateDescription>
+      <stateName>Empregado - Complementar expediente</stateName>
+      <stateDescription>Empregado - Complementar expediente</stateDescription>
       <instruction></instruction>
       <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
@@ -333,7 +333,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>208</version>
+        <version>209</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -347,7 +347,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>208</version>
+        <version>209</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -782,7 +782,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>208</version>
+        <version>209</version>
         <linkSequence>26</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -793,7 +793,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>208</version>
+        <version>209</version>
         <linkSequence>26</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -804,7 +804,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>208</version>
+        <version>209</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -815,7 +815,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>208</version>
+        <version>209</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -826,7 +826,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>208</version>
+        <version>209</version>
         <linkSequence>32</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -837,7 +837,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>208</version>
+        <version>209</version>
         <linkSequence>32</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -848,7 +848,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>208</version>
+        <version>209</version>
         <linkSequence>32</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
