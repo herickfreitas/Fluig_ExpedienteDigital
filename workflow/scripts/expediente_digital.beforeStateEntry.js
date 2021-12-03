@@ -74,7 +74,21 @@ function ComplementoHistorico() {
         //		MOVIMENTANDO CONTEÚDO DE DESPACHO PARA DESPACHO HISTORICO		//
 		//////////////////////////////////////////////////////////////////////////	
 		var userLogado = getValue("WKUser");					// Recupera o usuário corrente associado a atividade
-		var despacho 		= hAPI.getCardValue("despacho");
+		var despacho   = hAPI.getCardValue("despacho");
+		
+		//Capturando função e lotação do usuário
+		var consulta = DatasetFactory.createConstraint("CODUSUARIO", userLogado, userLogado, ConstraintType.MUST);
+		var constraints = new Array(consulta);
+		log.info("==========[ _RM_DADOS_COLABORADORES - constraints ]========== " + constraints);
+		
+		// coleta dados do dataset, utlizando filtro
+		var datasetRetorno = DatasetFactory.getDataset("_RM_DADOS_COLABORADORES", null, constraints, null);
+		log.info("==========[ _RM_DADOS_COLABORADORES - datasetRetorno ] ========== " + datasetRetorno);	
+		
+		var nomeSecao  = datasetRetorno.getValue(0, "NOME_SECAO");
+		var nomeFuncao = datasetRetorno.getValue(0, "NOME_FUNCAO");
+		
+		
 		
 		if (despacho != ""){
 			
@@ -83,7 +97,7 @@ function ComplementoHistorico() {
 			var historicoDespacho 	= hAPI.getCardValue("historicoDespacho");
 			// Formatando
 			var dataFormatada = dataAtualFormatada(); 
-			var concatenando = 'Colaborador(a): '+nome_Completo+' \n Data: '+dataFormatada+' \n Despacho: '+despacho;
+			var concatenando = 'Colaborador(a): '+nome_Completo+' \n Função: '+nomeFuncao+' \n Seção: '+nomeSecao+' \n Data: '+dataFormatada+' \n Despacho: '+despacho;
 			log.info("==========[ ProcessamentoWorkflow - Expediente Digital - historicoDespacho - ColaboradorWorkflow - concatenando ]========== "+concatenando);
 			hAPI.setCardValue("historicoDespacho", concatenando + quebraLinha + historicoDespacho);
 			
@@ -197,6 +211,20 @@ function ProcessamentoWorkflow(){
 		hAPI.setCardValue("identificadorFluig", processo);
 		hAPI.setCardValue("solicitante", solicitante);
 		
+		
+		//Capturando função e lotação do usuário
+		var consulta = DatasetFactory.createConstraint("CODUSUARIO", solicitante, solicitante, ConstraintType.MUST);
+		var constraints = new Array(consulta);
+		log.info("==========[ _RM_DADOS_COLABORADORES - constraints ]========== " + constraints);
+		
+		// coleta dados do dataset, utlizando filtro
+		var datasetRetorno = DatasetFactory.getDataset("_RM_DADOS_COLABORADORES", null, constraints, null);
+		log.info("==========[ _RM_DADOS_COLABORADORES - datasetRetorno ] ========== " + datasetRetorno);	
+		
+		var nomeSecao  = datasetRetorno.getValue(0, "NOME_SECAO");
+		var nomeFuncao = datasetRetorno.getValue(0, "NOME_FUNCAO");
+		
+		
         //////////////////////////////////////////////////////////////////////////
         //		MOVIMENTANDO CONTEÚDO DE DESPACHO PARA DESPACHO HISTORICO		//
 		//////////////////////////////////////////////////////////////////////////		
@@ -204,7 +232,7 @@ function ProcessamentoWorkflow(){
 		var despacho = hAPI.getCardValue("despacho");
 		// Formatando
 		var dataFormatada = dataAtualFormatada(); 
-		var concatenando = 'Solicitante: '+nome_Completo+' \n Data: '+dataFormatada+' \n Despacho: '+despacho;
+		var concatenando = 'Solicitante: '+nome_Completo+' \n Função: '+nomeFuncao+' \n Seção: '+nomeSecao+' \n Data: '+dataFormatada+' \n Despacho: '+despacho;
 		log.info("==========[ ProcessamentoWorkflow - Expediente Digital - historicoDespacho - concatenando ]========== "+concatenando);
 		hAPI.setCardValue("historicoDespacho", concatenando);
 		// Esvaziando campo despacho
