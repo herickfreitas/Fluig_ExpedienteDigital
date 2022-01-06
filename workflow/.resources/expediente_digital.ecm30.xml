@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>3</version>
+      <version>5</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -45,7 +45,7 @@
     <processStates/>
     <favorito>false</favorito>
     <inheritFormSecurity>false</inheritFormSecurity>
-    <mobileReady>false</mobileReady>
+    <mobileReady>true</mobileReady>
   </ProcessDefinitionVersion>
   <list>
     <ProcessState>
@@ -136,7 +136,7 @@
       <notifyManagerDelay>false</notifyManagerDelay>
       <allowanceManagerTime>0</allowanceManagerTime>
       <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
+      <inhibitTransfer>true</inhibitTransfer>
       <periodId>Expediente_CNC_10as19</periodId>
       <stateType>0</stateType>
       <bpmnType>80</bpmnType>
@@ -188,7 +188,7 @@
       <notifyManagerDelay>false</notifyManagerDelay>
       <allowanceManagerTime>0</allowanceManagerTime>
       <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
+      <inhibitTransfer>true</inhibitTransfer>
       <periodId>Expediente_CNC_10as19</periodId>
       <stateType>0</stateType>
       <bpmnType>80</bpmnType>
@@ -240,7 +240,7 @@
       <notifyManagerDelay>false</notifyManagerDelay>
       <allowanceManagerTime>0</allowanceManagerTime>
       <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
+      <inhibitTransfer>true</inhibitTransfer>
       <periodId>Expediente_CNC_10as19</periodId>
       <stateType>0</stateType>
       <bpmnType>80</bpmnType>
@@ -333,7 +333,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>3</version>
+        <version>5</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -347,7 +347,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>3</version>
+        <version>5</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -810,7 +810,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>3</version>
+        <version>5</version>
         <linkSequence>26</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -821,7 +821,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>3</version>
+        <version>5</version>
         <linkSequence>26</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -832,7 +832,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>3</version>
+        <version>5</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -843,7 +843,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>3</version>
+        <version>5</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -854,7 +854,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>3</version>
+        <version>5</version>
         <linkSequence>32</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -865,7 +865,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>3</version>
+        <version>5</version>
         <linkSequence>32</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -876,7 +876,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>3</version>
+        <version>5</version>
         <linkSequence>32</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -894,27 +894,27 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
-      <description></description>
+      <description>@[form:assunto]</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
-      <description></description>
+      <description>@[form:historicoDespacho]</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -924,47 +924,47 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
-      <description></description>
+      <description>22</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
-      <description></description>
+      <description>11</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
-      <description></description>
+      <description>@[form:assunto]</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
-      <description></description>
+      <description>@[form:historicoDespacho]</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>highlight</appField>
@@ -974,7 +974,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -984,7 +984,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -994,51 +994,11 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
-      <stateSequence>28</stateSequence>
-      <appKey>approval</appKey>
-      <appField>title</appField>
-      <description></description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
-      <stateSequence>28</stateSequence>
-      <appKey>approval</appKey>
-      <appField>description</appField>
-      <description></description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
-      <stateSequence>28</stateSequence>
-      <appKey>approval</appKey>
-      <appField>highlight</appField>
-      <description></description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
+      <processVersion>5</processVersion>
       <stateSequence>28</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
       <description>22</description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>3</processVersion>
-      <stateSequence>28</stateSequence>
-      <appKey>approval</appKey>
-      <appField>reject</appField>
-      <description></description>
     </ProcessAppConfiguration>
   </list>
   <list/>

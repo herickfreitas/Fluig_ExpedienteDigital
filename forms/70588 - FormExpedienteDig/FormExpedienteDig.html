@@ -28,6 +28,7 @@
 					<div class="panel-body">
 						<div class="container-fluid">
 							<div class="alert alert-danger" id="error" role="alert" style="display:none"></div>
+							<input type='hidden' name='usuarioCorrente' id='usuarioCorrente' />
 							<input type='hidden' name='solicitante' id='solicitante' />
 							<input type='hidden' name='gestorAnterior' id='gestorAnterior' />
 							<input type='hidden' name='dataSolicitacao' id='dataSolicitacao' />
@@ -140,12 +141,22 @@
 							// Ocultando seleção, será habilitada caso seja um gestor.
 							$('#dvGestor').hide();
 						
+							
+							//Chamada do usuário corrente através da API
+							//http://minhahomolog.cnc.org.br/api/public/2.0/users/getCurrent
+							
 
 							// capturando usuario logado
-							var wcmapi = parent.WCMAPI;
-							var usuarioLogado = wcmapi.getUserCode();
-							usuarioLogado = usuarioLogado.toLowerCase();
+							//var wcmapi = parent.WCMAPI;
+							//var usuarioLogado = wcmapi.getUserCode();
+							//usuarioLogado = usuarioLogado.toLowerCase();
 							//console.log("Form usuarioLogado: "+usuarioLogado);
+
+							// capturando usuario logado
+							var usuarioLogado = document.getElementById("usuarioCorrente").value;
+							usuarioLogado = usuarioLogado.toLowerCase();
+							console.log("Form usuarioLogado: "+usuarioLogado);
+
 							
 							var gestorLogado = false; // true é um gestor logado, false não é um, gestor logado
 							
