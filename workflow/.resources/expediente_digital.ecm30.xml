@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>5</version>
+      <version>7</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -333,7 +333,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>5</version>
+        <version>7</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -347,7 +347,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>5</version>
+        <version>7</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -810,7 +810,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>5</version>
+        <version>7</version>
         <linkSequence>26</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -821,7 +821,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>5</version>
+        <version>7</version>
         <linkSequence>26</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -832,7 +832,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>5</version>
+        <version>7</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -843,7 +843,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>5</version>
+        <version>7</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -854,7 +854,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>5</version>
+        <version>7</version>
         <linkSequence>32</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -865,7 +865,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>5</version>
+        <version>7</version>
         <linkSequence>32</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -876,7 +876,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>5</version>
+        <version>7</version>
         <linkSequence>32</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -894,7 +894,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -904,7 +904,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -914,17 +914,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
-      <stateSequence>5</stateSequence>
-      <appKey>approval</appKey>
-      <appField>highlight</appField>
-      <description></description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -934,7 +924,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -944,7 +934,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -954,7 +944,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -964,17 +954,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
-      <stateSequence>9</stateSequence>
-      <appKey>approval</appKey>
-      <appField>highlight</appField>
-      <description></description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -984,17 +964,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
-      <stateSequence>9</stateSequence>
-      <appKey>approval</appKey>
-      <appField>reject</appField>
-      <description></description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>5</processVersion>
+      <processVersion>7</processVersion>
       <stateSequence>28</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
