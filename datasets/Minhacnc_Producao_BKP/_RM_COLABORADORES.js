@@ -7,29 +7,24 @@ function createDataset(fields, constraints, sortFields) {
     
     log.info("QUERY _RM_COLABORADORES constraints: " + constraints);
     
+    if (constraints == null) {
+    	var myQuery = "SELECT * FROM _Fluig_Colaboradores order by 1";
+    } 
     
-    var codusuario_chefe 	= "";
-    var codusuario 			= "";
-    
-    for (var i = 0; i < constraints.length; i++) {
-    	if (constraints[i].fieldName == 'CODUSUARIO_CHEFE') {
-    		codusuario_chefe = constraints[i].initialValue;
+    else {
+        var processo = "";
+        for (var i = 0; i < constraints.length; i++) {
+            if (constraints[i].fieldName == 'CODUSUARIO_CHEFE') {
+                processo = constraints[i].initialValue;
+                var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+processo+"' order by 1";
             }
-        if (constraints[i].fieldName == 'CODUSUARIO') {
-        	var codusuario = constraints[i].initialValue;
+            if (constraints[i].fieldName == 'CODUSUARIO') {
+                processo = constraints[i].initialValue;
+                var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario = "+"'"+processo+"' order by 1";
             }
         }
-
-    
-    if (codusuario == "" && codusuario_chefe != "") {
-    	var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+codusuario_chefe+"' order by 1";
+        
     }
-    else if (codusuario != "" && codusuario_chefe == ""){
-    	var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario like "+"'"+codusuario+"%' order by 1";
-    }
-    else {
-    	var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+codusuario_chefe+"'"+" and codusuario like "+"'"+codusuario+"%' order by 1";
-    } 
     
     log.info("QUERY _RM_COLABORADORES: " + myQuery);
     
