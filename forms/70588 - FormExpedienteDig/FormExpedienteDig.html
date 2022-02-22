@@ -34,24 +34,22 @@
 							<input type='hidden' name='dataSolicitacao' id='dataSolicitacao' />
 							<input type='hidden' name='identificadorFluig' id='identificadorFluig' />
 							<input type='hidden' name='gestorLogado' id='gestorLogado' />
-							
-							
-				
-					<div class="row form-group" id="dvGestor">
-						
-						
-						<div class="panel-body">
-							<div class="alert alert alert-warning" role="alert">
-								<strong>Atenção!!</strong> Selecione um Gestor/Assessor ou um Empregado subordinado para direcionar o expediente.
-							</div>
-						</div>
-						
-						<div class="col-xs-6 col-md-6"> 
-							<label class="control-label" id="lblGestor">Selecione um Gestor ou Assessor</label>
-								<input  type="zoom"
-								id = "gestor"
-								name="gestor"
-								data-zoom="{
+
+
+
+							<div class="row form-group" id="dvGestor">
+
+
+								<div class="panel-body">
+									<div class="alert alert alert-warning" role="alert">
+										<strong>Atenção!!</strong> Selecione um Gestor/Assessor ou um Empregado para
+										direcionar o expediente.
+									</div>
+								</div>
+
+								<div class="col-xs-6 col-md-6">
+									<label class="control-label" id="lblGestor">Selecione um Gestor ou Assessor</label>
+									<input type="zoom" id="gestor" name="gestor" data-zoom="{
 											'displayKey':'CODUSUARIO_CHEFE',
 											'datasetId':'_RM_GESTORES',
 											'maximumSelectionLength':'1',
@@ -65,17 +63,12 @@
 												'label':'Cod usuario'
 												}
 											]
-										}"
-										/>
-						</div>
-						
-						<div class="col-xs-6 col-md-6"> 
-						<label class="control-label" id="lblcolaborador">Selecione um Empregado subordinado </label>
-						<input 
-							type="zoom"
-							id = "colaborador"
-							name="colaborador"
-							data-zoom="{
+										}" />
+								</div>
+
+								<div class="col-xs-6 col-md-6">
+									<label class="control-label" id="lblcolaborador">Selecione um Empregado </label>
+									<input type="zoom" id="colaborador" name="colaborador" data-zoom="{
 								'displayKey':'CODUSUARIO',
 								'datasetId':'_RM_COLABORADORES',
 								'maximumSelectionLength':'1',
@@ -89,16 +82,15 @@
 									  'standard':'true'
 									}
 								]
-							}"
-						/>
-						</div>
-						
-					</div>
+							}" />
+								</div>
+
+							</div>
 
 
 
-					<br><br>
-					
+							<br><br>
+
 
 							<div class="row form-group">
 								<div class="col-xs-12 col-md-12">
@@ -117,7 +109,8 @@
 							<div class="row form-group">
 								<div class="col-xs-12 col-md-12">
 									<label class="control-label" id="lblHistoricoDespacho">Histórico do Despacho</label>
-									<textarea class="form-control" rows="60" name="historicoDespacho" id="historicoDespacho" readonly></textarea>
+									<textarea class="form-control" rows="60" name="historicoDespacho"
+										id="historicoDespacho" readonly></textarea>
 								</div>
 							</div>
 
@@ -127,75 +120,59 @@
 			</div>
 
 		</form>
-			<script>
-				// carrega o form com um timeout  
-				$(document).ready(function () {
-					setTimeout(function () {
-						LoadForm();
-						$('#loading').hide();
-					}, 500);
-					});
-				
-			    function LoadForm() {
-      				try {
-							// Ocultando seleção, será habilitada caso seja um gestor.
-							$('#dvGestor').hide();
-						
-							
-							//Chamada do usuário corrente através da API
-							//http://minhahomolog.cnc.org.br/api/public/2.0/users/getCurrent
-							
+		<script>
+			// carrega o form com um timeout  
+			$(document).ready(function () {
+				setTimeout(function () {
+					LoadForm();
+					$('#loading').hide();
+				}, 500);
+			});
 
-							// capturando usuario logado
-							//var wcmapi = parent.WCMAPI;
-							//var usuarioLogado = wcmapi.getUserCode();
-							//usuarioLogado = usuarioLogado.toLowerCase();
-							//console.log("Form usuarioLogado: "+usuarioLogado);
+			function LoadForm() {
+				try {
+					// capturando usuario logado
+					var usuarioLogado = document.getElementById("usuarioCorrente").value;
+					usuarioLogado = usuarioLogado.toLowerCase();
+					//console.log("Form usuarioLogado: " + usuarioLogado);
 
-							// capturando usuario logado
-							var usuarioLogado = document.getElementById("usuarioCorrente").value;
-							usuarioLogado = usuarioLogado.toLowerCase();
-							console.log("Form usuarioLogado: "+usuarioLogado);
+					// Preparacao de filtro para consulta
+					var c1 = DatasetFactory.createConstraint("CODUSUARIO_CHEFE", usuarioLogado, usuarioLogado, ConstraintType.MUST);
+					var constraints = new Array(c1);
 
-							
-							var gestorLogado = false; // true é um gestor logado, false não é um, gestor logado
-							
-							var datasetGestor = DatasetFactory.getDataset("_RM_GESTORES", null, null, null); // Buscando dataset gestores
-							var records = datasetGestor.values; // Gravando valores de retorno
+					var datasetGestor = DatasetFactory.getDataset("_RM_GESTORES", null, constraints, null); // Buscando dataset gestores
+					var rowsCount = datasetGestor.values.length;
+					//console.log("rowsCount: " + rowsCount);
 
-							var gestorRetornado = "";
-							for (var index in records) {
-								var record = records[index];
-								gestorRetornado = record.CODUSUARIO_CHEFE;
-								//Verificando se usuário logado foi retornado na busca
-								if (usuarioLogado == gestorRetornado) {
-									gestorLogado = true;
-									//console.log(" IF ENTROU: usuarioLogado == gestorRetornado ");
-									}
-							}
-							
-							if (gestorLogado == true) {
-								console.log(" IF ENTROU: gestorLogado == true ");
-								$("#gestorLogado").val(true);
-								// Habilitando seleção para gestores
-								$('#dvGestor').show();
-								// Filtrando colaboradores
-								filtrazoom(usuarioLogado);
-								
-							}
-							else if (gestorLogado == false) {
-								$("#gestorLogado").val(false);
-							}
-						
-						}
+					// Verificando se o campo está editável ou não
+					var myElem = document.getElementById("despacho");
+					var tipo = myElem.getAttribute("type");
 					
-							catch (e) {
-							$('#error').show();
-							$('#error').html("Erro: " + e.message);
+					// condicionando a chamada do filtro para não gerar erro na tela quando o expediente for consultado.
+					if ( tipo == null ) {
+						if (rowsCount > 0) {
+							$("#gestorLogado").val(true);
+							filtrazoomEmpregado(usuarioLogado);
+						}
+						else {
+							$("#gestorLogado").val(false);
+							filtrazoomGestorEmpregado(usuarioLogado);
+							filtrazoomEquipeEmpregado(usuarioLogado);
 						}
 					}
 
-			</script>
+
+
+
+				}
+
+				catch (e) {
+					$('#error').show();
+					$('#error').html("Erro: " + e.message);
+				}
+			}
+
+		</script>
 
 	</div>
 </body>

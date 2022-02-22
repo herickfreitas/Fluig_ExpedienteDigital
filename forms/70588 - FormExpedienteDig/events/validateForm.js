@@ -1,11 +1,13 @@
 function validateForm(form){
 	
-	var activity = getValue('WKNumState');
+	var activity 			= getValue('WKNumState');
+	var nextActivity 		= getValue('WKNextState');
 	var inicioPadrao 		= 0;
 	var inicio		 		= 4;
 	var etapaProcessamento	= 28;
 	var etapaGestor	 		= 5;
 	var etapaColaborador	= 9;
+	var etapaGateway		= 22;
 	
 	
 	log.info("FormExpedienteDig - validateForm - WKNumState "+activity);
@@ -16,28 +18,31 @@ function validateForm(form){
 	var gestorLogado = form.getValue('gestorLogado'); // true é um gestor logado, false não é um, gestor logado - ATENÇÃO O CAMPO É TEXTO
 	
 	
-	if ((activity == inicioPadrao || activity == inicio) && gestorLogado == "true") {
-
+	if ( nextActivity == etapaGateway){ 
+		
+		log.info("FormExpedienteDig - validateForm - nextActivity entrou!! ");
+		
 		if (form.getValue('gestor') == "" && form.getValue('colaborador') == ""){
-			msg += "Selecione um Gestor ou um Empregado subordinado.\n";
+			msg += "Selecione um Gestor/Acessor ou um Empregado.\n";
 			var hasErros = true;
 			}
 		if (form.getValue('gestor') != "" && form.getValue('colaborador') != ""){
-			msg += "Selecione um Gestor ou um Empregado subordinado.\n";
-			var hasErros = true;
-			}
-		if (form.getValue('assunto') == ""){
-			msg += "Assunto tem preenchimento obrigatório. \n";
-			var hasErros = true;
-			}
-		if (form.getValue('despacho') == ""){
-			msg += "Despacho tem preenchimento obrigatório. \n";
+			msg += "Selecione um Gestor/Acessor ou um Empregado.\n";
 			var hasErros = true;
 			}
 	}
 	
-	else if ((activity == inicioPadrao || activity == inicio) && gestorLogado == "false") {
-		
+	
+	if (activity == inicioPadrao || activity == inicio) {
+
+		if (form.getValue('gestor') == "" && form.getValue('colaborador') == ""){
+			msg += "Selecione um Gestor/Acessor ou um Empregado.\n";
+			var hasErros = true;
+			}
+		if (form.getValue('gestor') != "" && form.getValue('colaborador') != ""){
+			msg += "Selecione um Gestor/Acessor ou um Empregado.\n";
+			var hasErros = true;
+			}
 		if (form.getValue('assunto') == ""){
 			msg += "Assunto tem preenchimento obrigatório. \n";
 			var hasErros = true;
@@ -49,7 +54,7 @@ function validateForm(form){
 	}
 	
 	else if (activity == etapaGestor) {
-		
+
 		if (form.getValue('despacho') == ""){
 			msg += "Despacho tem preenchimento obrigatório. \n";
 			var hasErros = true;

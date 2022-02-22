@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>7</version>
+      <version>8</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -333,7 +333,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>7</version>
+        <version>8</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -347,7 +347,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>7</version>
+        <version>8</version>
         <sequence>22</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -678,9 +678,9 @@ function ColaboradorWorkflow() {&#xd;
 		//Limpando campo colaborador&#xd;
 		hAPI.setCardValue(&quot;colaborador&quot;, &quot;&quot;);&#xd;
 		&#xd;
-		if (gestor == &quot;&quot;) {&#xd;
-			hAPI.setCardValue(&quot;gestor&quot;, gestorAnterior);&#xd;
-		}&#xd;
+		//if (gestor == &quot;&quot;) {&#xd;
+		//	hAPI.setCardValue(&quot;gestor&quot;, gestorAnterior);&#xd;
+		//}&#xd;
 		&#xd;
 	}&#xd;
 	catch (e)&#xd;
@@ -744,7 +744,7 @@ function ProcessamentoWorkflow(){&#xd;
 		// Esvaziando campo despacho&#xd;
 		hAPI.setCardValue(&quot;despacho&quot;, &quot;&quot;);&#xd;
 		&#xd;
-		&#xd;
+		/*&#xd;
         //////////////////////////////////////////////////////////&#xd;
         //		QUANDO FOR UM GESTOR QUE INICIOU O PROCESSO		//&#xd;
         //////////////////////////////////////////////////////////&#xd;
@@ -760,6 +760,7 @@ function ProcessamentoWorkflow(){&#xd;
         //////////////////////////////////////////////////////////		&#xd;
 		&#xd;
 		else if (gestorLogado == &quot;false&quot;) {&#xd;
+			&#xd;
 			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - IF-ENTROU (gestorLogado == false) ]========== &quot;);&#xd;
 			var c1 = DatasetFactory.createConstraint(&quot;CODUSUARIO&quot;, solicitante, solicitante, ConstraintType.MUST);&#xd;
 			var constraints = new Array(c1);&#xd;
@@ -771,7 +772,9 @@ function ProcessamentoWorkflow(){&#xd;
 	        	log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - codUsuarioChefe ]========== &quot;+codUsuarioChefe);&#xd;
 	        	hAPI.setCardValue(&quot;gestor&quot;, codUsuarioChefe);&#xd;
 				}&#xd;
+			&#xd;
 			}&#xd;
+			*/&#xd;
 		}&#xd;
 	&#xd;
 	catch (e)&#xd;
@@ -810,7 +813,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>7</version>
+        <version>8</version>
         <linkSequence>26</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -821,7 +824,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>7</version>
+        <version>8</version>
         <linkSequence>26</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -832,7 +835,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>7</version>
+        <version>8</version>
         <linkSequence>30</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -843,7 +846,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>7</version>
+        <version>8</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -854,7 +857,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>7</version>
+        <version>8</version>
         <linkSequence>32</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -865,7 +868,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>7</version>
+        <version>8</version>
         <linkSequence>32</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -876,7 +879,7 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>7</version>
+        <version>8</version>
         <linkSequence>32</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
@@ -894,7 +897,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -904,7 +907,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -914,7 +917,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -924,7 +927,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>5</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -934,7 +937,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>title</appField>
@@ -944,7 +947,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>description</appField>
@@ -954,7 +957,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>9</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -964,7 +967,7 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>7</processVersion>
+      <processVersion>8</processVersion>
       <stateSequence>28</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>

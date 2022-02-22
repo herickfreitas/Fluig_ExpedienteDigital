@@ -5,12 +5,28 @@ function createDataset(fields, constraints, sortFields) {
     var ds = ic.lookup(dataSource);
     var created = false;
     
-    log.info("QUERY _RM_GESTORES");
+    log.info("QUERY _RM_GESTORES" + constraints);
     
-    //var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+processo+"' order by 1";
-    var myQuery = "SELECT DISTINCT CODUSUARIO_CHEFE, CHEFE FROM _Fluig_Colaboradores";
+    if (constraints == null) {
+    	var myQuery = "SELECT DISTINCT CODUSUARIO_CHEFE, CHEFE FROM _Fluig_Colaboradores order by 1";
+    }
+    else {
+    	var processo = "";
+        for (var i = 0; i < constraints.length; i++) {
+            if (constraints[i].fieldName == 'CODUSUARIO_CHEFE') {
+                processo = constraints[i].initialValue;
+                var myQuery = "SELECT TOP 1 * FROM _Fluig_Colaboradores where codusuario_chefe like "+"'"+processo+"%' order by 1";
+            }
+            if (constraints[i].fieldName == 'CODUSUARIO') {
+                processo = constraints[i].initialValue;
+                var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario = "+"'"+processo+"' order by 1";
+            }
+        }
+        
+    }
     
     log.info("QUERY _RM_GESTORES: " + myQuery);
+    
     try {
         var conn = ds.getConnection();
         var stmt = conn.createStatement();

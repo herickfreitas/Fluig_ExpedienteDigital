@@ -5,19 +5,29 @@ function createDataset(fields, constraints, sortFields) {
     var ds = ic.lookup(dataSource);
     var created = false;
     
-    log.info("QUERY _Fluig_COLABORADORES constraints: " + constraints);
+    log.info("QUERY _RM_COLABORADORES constraints: " + constraints);
     
-    var processo = "";
-    for (var i = 0; i < constraints.length; i++) {
-        if (constraints[i].fieldName == 'CODUSUARIO_CHEFE') {
-            processo = constraints[i].initialValue;    
+    if (constraints == null) {
+    	var myQuery = "SELECT * FROM _Fluig_Colaboradores order by 1";
+    } 
+    
+    else {
+        var processo = "";
+        for (var i = 0; i < constraints.length; i++) {
+            if (constraints[i].fieldName == 'CODUSUARIO_CHEFE') {
+                processo = constraints[i].initialValue;
+                var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+processo+"' order by 1";
+            }
+            if (constraints[i].fieldName == 'CODUSUARIO') {
+                processo = constraints[i].initialValue;
+                var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario = "+"'"+processo+"' order by 1";
+            }
         }
+        
     }
-
-
-    //var myQuery = "SELECT * FROM _Fluig_Colaboradores order by 1";
-    var myQuery = "SELECT * FROM _Fluig_Colaboradores where codusuario_chefe = "+"'"+processo+"' order by 1";
-    log.info("QUERY _Fluig_COLABORADORES: " + myQuery);
+    
+    log.info("QUERY _RM_COLABORADORES: " + myQuery);
+    
     try {
         var conn = ds.getConnection();
         var stmt = conn.createStatement();

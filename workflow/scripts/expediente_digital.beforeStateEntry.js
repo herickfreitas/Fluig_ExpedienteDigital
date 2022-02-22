@@ -172,9 +172,9 @@ function ColaboradorWorkflow() {
 		//Limpando campo colaborador
 		hAPI.setCardValue("colaborador", "");
 		
-		if (gestor == "") {
-			hAPI.setCardValue("gestor", gestorAnterior);
-		}
+		//if (gestor == "") {
+		//	hAPI.setCardValue("gestor", gestorAnterior);
+		//}
 		
 	}
 	catch (e)
@@ -238,7 +238,7 @@ function ProcessamentoWorkflow(){
 		// Esvaziando campo despacho
 		hAPI.setCardValue("despacho", "");
 		
-		
+		/*
         //////////////////////////////////////////////////////////
         //		QUANDO FOR UM GESTOR QUE INICIOU O PROCESSO		//
         //////////////////////////////////////////////////////////
@@ -254,6 +254,7 @@ function ProcessamentoWorkflow(){
         //////////////////////////////////////////////////////////		
 		
 		else if (gestorLogado == "false") {
+			
 			log.info("==========[ ProcessamentoWorkflow - Expediente Digital - IF-ENTROU (gestorLogado == false) ]========== ");
 			var c1 = DatasetFactory.createConstraint("CODUSUARIO", solicitante, solicitante, ConstraintType.MUST);
 			var constraints = new Array(c1);
@@ -265,7 +266,9 @@ function ProcessamentoWorkflow(){
 	        	log.info("==========[ ProcessamentoWorkflow - Expediente Digital - codUsuarioChefe ]========== "+codUsuarioChefe);
 	        	hAPI.setCardValue("gestor", codUsuarioChefe);
 				}
+			
 			}
+			*/
 		}
 	
 	catch (e)
