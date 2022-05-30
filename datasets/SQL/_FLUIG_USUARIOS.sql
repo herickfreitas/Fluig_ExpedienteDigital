@@ -1,0 +1,17 @@
+
+
+
+alter view _FLUIG_USUARIOS AS 
+
+
+SELECT UPPER(FULL_NAME) AS FULL_NAME, LOWER(EMAIL) AS EMAIL ,LOWER(LOGIN) AS LOGIN 
+	FROM FDN_USERTENANT 
+		JOIN FDN_USER ON (FDN_USERTENANT.USER_ID = FDN_USER.USER_ID)
+where	USER_STATE	=	1 /* ATIVOS */
+AND		TENANT_ID	=	1
+AND		LOGIN		NOT IN 	('nologin_1','adminfluig','totvs','usuarioteste','mestre')
+
+
+
+
+

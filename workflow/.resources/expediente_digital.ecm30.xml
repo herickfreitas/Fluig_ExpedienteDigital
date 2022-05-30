@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>65</version>
+      <version>10</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -77,8 +77,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>30</positionX>
-      <positionY>60</positionY>
+      <positionX>50</positionX>
+      <positionY>40</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -103,121 +103,17 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <version>1</version>
-        <sequence>5</sequence>
-      </processStatePK>
-      <stateName>Gestor - Complementar e direcionar expediente</stateName>
-      <stateDescription>Gestor - Complementar e direcionar expediente</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Campo Formulário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;gestor&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>280</positionX>
-      <positionY>248</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>true</inhibitTransfer>
-      <periodId>Expediente_CNC_10as19</periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <sequence>9</sequence>
-      </processStatePK>
-      <stateName>Empregado - Complementar expediente</stateName>
-      <stateDescription>Empregado - Complementar expediente</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <deadlineFieldName></deadlineFieldName>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Campo Formulário</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;colaborador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
-      <selectColleague>1</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>640</positionX>
-      <positionY>80</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>true</inhibitTransfer>
-      <periodId>Expediente_CNC_10as19</periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
         <sequence>28</sequence>
       </processStatePK>
-      <stateName>Processamento</stateName>
-      <stateDescription>Processamento</stateDescription>
+      <stateName>Destinatário</stateName>
+      <stateDescription>Destinatário</stateDescription>
       <instruction></instruction>
-      <deadlineTime>300</deadlineTime>
+      <deadlineTime>0</deadlineTime>
       <deadlineFieldName></deadlineFieldName>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Executor Atividade</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;4&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;destinatario&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>1</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -232,8 +128,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>100</positionX>
-      <positionY>10</positionY>
+      <positionX>170</positionX>
+      <positionY>110</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -259,7 +155,111 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <version>1</version>
-        <sequence>22</sequence>
+        <sequence>34</sequence>
+      </processStatePK>
+      <stateName>Grupo</stateName>
+      <stateDescription>Grupo</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;grupo&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>900</positionX>
+      <positionY>30</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <sequence>37</sequence>
+      </processStatePK>
+      <stateName>Leitor</stateName>
+      <stateDescription>Leitor</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>120</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;leitor&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>360</positionX>
+      <positionY>245</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId>Default</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <sequence>30</sequence>
       </processStatePK>
       <stateName>Encaminhar expediente</stateName>
       <stateDescription>Encaminhar expediente</stateDescription>
@@ -269,8 +269,33 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>300</positionX>
-      <positionY>68</positionY>
+      <positionX>380</positionX>
+      <positionY>10</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <sequence>39</sequence>
+      </processStatePK>
+      <stateName>atribuindo leitor</stateName>
+      <stateDescription>atribuindo leitor</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>780</positionX>
+      <positionY>220</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -308,8 +333,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>true</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>550</positionX>
-      <positionY>280</positionY>
+      <positionX>50</positionX>
+      <positionY>120</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -333,12 +358,12 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>65</version>
-        <sequence>22</sequence>
+        <version>10</version>
+        <sequence>30</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
-      <destinationSequenceId>9</destinationSequenceId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;colaborador&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <destinationSequenceId>28</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;destinatario&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <engineAllocationId>Campo Formulário</engineAllocationId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
@@ -347,119 +372,55 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>65</version>
-        <sequence>22</sequence>
+        <version>10</version>
+        <sequence>30</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
-      <destinationSequenceId>5</destinationSequenceId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;gestor&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <destinationSequenceId>34</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;grupo&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <engineAllocationId>Campo Formulário</engineAllocationId>
+      <conditionType>1</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <expressionOrder>3</expressionOrder>
+        <version>10</version>
+        <sequence>30</sequence>
+      </conditionProcessStatePK>
+      <condition>false</condition>
+      <destinationSequenceId>37</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;leitor&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <conditionType>1</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>10</version>
+        <sequence>39</sequence>
+      </conditionProcessStatePK>
+      <condition>false</condition>
+      <destinationSequenceId>30</destinationSequenceId>
+      <conditionType>1</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>10</version>
+        <sequence>39</sequence>
+      </conditionProcessStatePK>
+      <condition>false</condition>
+      <destinationSequenceId>37</destinationSequenceId>
       <conditionType>1</conditionType>
     </ConditionProcessState>
   </list>
   <list>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <linkSequence>24</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>22</initialStateSequence>
-      <finalStateSequence>9</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <linkSequence>25</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>22</initialStateSequence>
-      <finalStateSequence>5</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <linkSequence>26</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>5</initialStateSequence>
-      <finalStateSequence>22</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <linkSequence>27</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>5</initialStateSequence>
-      <finalStateSequence>11</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <linkSequence>29</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>4</initialStateSequence>
-      <finalStateSequence>28</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>1</version>
-        <linkSequence>30</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>28</initialStateSequence>
-      <finalStateSequence>22</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
     <ProcessLink>
       <processLinkPK>
         <companyId>1</companyId>
@@ -470,10 +431,10 @@
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
       <initialStateSequence>28</initialStateSequence>
-      <finalStateSequence>22</finalStateSequence>
+      <finalStateSequence>30</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
-      <automaticLink>true</automaticLink>
+      <automaticLink>false</automaticLink>
       <defaultLink>false</defaultLink>
       <type>0</type>
     </ProcessLink>
@@ -486,8 +447,178 @@
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>9</initialStateSequence>
-      <finalStateSequence>22</finalStateSequence>
+      <initialStateSequence>28</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>33</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>30</initialStateSequence>
+      <finalStateSequence>28</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>35</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>30</initialStateSequence>
+      <finalStateSequence>34</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>36</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>34</initialStateSequence>
+      <finalStateSequence>30</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>30</initialStateSequence>
+      <finalStateSequence>37</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>40</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>37</initialStateSequence>
+      <finalStateSequence>39</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Registrar leitor no processo</name>
+      <automaticLink>true</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>41</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>39</initialStateSequence>
+      <finalStateSequence>37</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>42</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>39</initialStateSequence>
+      <finalStateSequence>30</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>43</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>34</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>44</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>37</initialStateSequence>
+      <finalStateSequence>39</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>1</version>
+        <linkSequence>45</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>30</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
       <automaticLink>false</automaticLink>
@@ -504,33 +635,150 @@
         <processId>expediente_digital</processId>
         <version>1</version>
       </workflowProcessEventPK>
-      <eventDescription>var SeqProcessamento = 28;&#xd;
-var SeqColaborador = 9;&#xd;
-var SeqGestor = 5;&#xd;
-var SeqGateway = 22;&#xd;
-var SeqFinalizar = 11;&#xd;
+      <eventDescription>var SeqDestinatario 		= 28;&#xd;
+var EncaminharExpediente 	= 30;&#xd;
+var SeqFinalizar 			= 11;&#xd;
+var SeqGrupo	 			= 34;&#xd;
+var SeqLeitor	 			= 37;&#xd;
 &#xd;
 &#xd;
 function beforeStateEntry(sequenceId){&#xd;
 	&#xd;
-	log.info(&quot;beforeStateEntry Expediente Digital - sequenceId:  &quot;+sequenceId);&#xd;
-	&#xd;
 	//If para sequenciar conforme etapas do processo&#xd;
-    if (sequenceId == SeqProcessamento) {&#xd;
-    	ProcessamentoWorkflow();&#xd;
+    if (sequenceId == SeqDestinatario) {&#xd;
+    	ativDestinatario();&#xd;
     }&#xd;
-    else if (sequenceId == SeqGateway || sequenceId == SeqFinalizar) {&#xd;
+    else if (sequenceId == SeqGrupo) {&#xd;
+    	ativGrupo();&#xd;
+    }&#xd;
+    else if (sequenceId == SeqLeitor) {&#xd;
+    	ativLeitor();&#xd;
+    }&#xd;
+	else if (sequenceId == EncaminharExpediente) {&#xd;
+    	ComplementoHistorico();&#xd;
+    	ativEncaminhar();&#xd;
+    	ordernarLeitoresCopia();&#xd;
+    }&#xd;
+	else if (sequenceId == SeqFinalizar) {&#xd;
     	ComplementoHistorico();&#xd;
     }&#xd;
-    else if (sequenceId == SeqColaborador) {&#xd;
-    	ColaboradorWorkflow();&#xd;
-    }&#xd;
-    else if (sequenceId == SeqGestor) {&#xd;
-    	GestorWorkflow();&#xd;
-    }&#xd;
-    &#xd;
 }&#xd;
 &#xd;
+function ativEncaminhar() {&#xd;
+	// Tratamento dos leitores&#xd;
+	var leitores 	 = hAPI.getCardValue(&quot;leitores&quot;);&#xd;
+	log.info(&quot;==========[ beforeStateEntry - ativEncaminhar - leitores ]========== &quot; + leitores);&#xd;
+	&#xd;
+	&#xd;
+	if ( leitores != &apos;&apos;) {&#xd;
+		&#xd;
+		// Tratando campo zoom com caracter especial &#xd;
+		// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp&#xd;
+		leitoresString = String(leitores);&#xd;
+	    var rege = new RegExp(&quot;[\u0018]&quot;, &quot;g&quot;); &#xd;
+	    var leitoresNovo = leitoresString.replace(rege, &quot; , &quot;);&#xd;
+	    log.info(&quot;leitoresNovo: &quot;  + leitoresNovo);&#xd;
+		&#xd;
+	    // Criando um objeto com leitores coletados&#xd;
+	    var arrayLeitores = [];&#xd;
+	    arrayLeitores = leitoresNovo.split(&apos; , &apos;);&#xd;
+	    &#xd;
+		// Capturando primeiro leitor&#xd;
+		var leitor = arrayLeitores[0];&#xd;
+		log.info(&quot;==========[ beforeStateEntry - ativEncaminhar - arrayLeitores[0] ]========== &quot; + leitor);&#xd;
+		hAPI.setCardValue(&quot;leitor&quot;,leitor);&#xd;
+		&#xd;
+		// Atualizando campo de leitores sem o primeiro leitor, ou vazio quando não houverem mais&#xd;
+		var qtd_arrayLeitores = arrayLeitores.length;&#xd;
+		log.info(&quot;==========[ beforeStateEntry - ativEncaminhar - qtd_arrayLeitores ]========== &quot; + qtd_arrayLeitores);&#xd;
+		&#xd;
+		var arrayLeitoresTemp = [];&#xd;
+		if (qtd_arrayLeitores &gt; 1 ) { // Quando há mais de um usuário em cópia&#xd;
+			for (var i = 1; i &lt; qtd_arrayLeitores; i++ ) {&#xd;
+				arrayLeitoresTemp.push(arrayLeitores[i]);&#xd;
+			}&#xd;
+			log.info(&quot;==========[ beforeStateEntry - ativEncaminhar - arrayLeitoresTemp ]========== &quot; + arrayLeitoresTemp);&#xd;
+			hAPI.setCardValue(&quot;leitores&quot;,arrayLeitoresTemp);&#xd;
+		}&#xd;
+		else { // Quando há somente um usuário em cópia&#xd;
+			hAPI.setCardValue(&quot;leitores&quot;,&apos;&apos;);&#xd;
+		}&#xd;
+		&#xd;
+	}&#xd;
+	else {&#xd;
+		// Formatando campo grupo para atribuição - SÓ IRÁ TRATAR O CAMPO QUANDO LEITORES ESTIVER VAZIO&#xd;
+		var grupo   = hAPI.getCardValue(&quot;grupo&quot;);&#xd;
+		log.info(&quot;==========[ beforeStateEntry - ativEncaminhar - grupo ]========== &quot; + grupo);&#xd;
+		if (grupo != &apos;&apos;) {&#xd;
+			var grupoTemp = &quot;Pool:Group:&quot;+grupo;&#xd;
+			log.info(&quot;==========[ beforeStateEntry - ativEncaminhar - grupoTemp ]========== &quot; + grupoTemp);&#xd;
+			hAPI.setCardValue(&quot;grupo&quot;, grupoTemp);&#xd;
+		}&#xd;
+	}&#xd;
+&#xd;
+}&#xd;
+&#xd;
+function ativGrupo() {&#xd;
+	// Grupo atual&#xd;
+	var grupoAtual 	 = hAPI.getCardValue(&quot;grupo&quot;);&#xd;
+	log.info(&quot;==========[ beforeStateEntry - ativGrupo - grupoAtual ]========== &quot; + grupoAtual);&#xd;
+	&#xd;
+	// Esvaziando campo destinatario&#xd;
+	hAPI.setCardValue(&quot;grupo&quot;, &quot;&quot;);&#xd;
+}&#xd;
+&#xd;
+&#xd;
+function ativDestinatario() {&#xd;
+	// Esvaziando campo destinatario&#xd;
+	hAPI.setCardValue(&quot;destinatario&quot;, &quot;&quot;);&#xd;
+}&#xd;
+&#xd;
+&#xd;
+function ativLeitor() {&#xd;
+	&#xd;
+	// Gravando leitores em cópia&#xd;
+	var leitorAtual 	 = hAPI.getCardValue(&quot;leitor&quot;);&#xd;
+	var leitoresCopia 	 = hAPI.getCardValue(&quot;leitoresCopia&quot;);&#xd;
+	&#xd;
+	if ( leitoresCopia == &apos;&apos; ) {&#xd;
+		hAPI.setCardValue(&quot;leitoresCopia&quot;, leitorAtual);&#xd;
+	}&#xd;
+	else {&#xd;
+		hAPI.setCardValue(&quot;leitoresCopia&quot;, leitoresCopia+&apos; , &apos;+leitorAtual);&#xd;
+	}&#xd;
+	&#xd;
+	// Esvaziando campo Leitor&#xd;
+	hAPI.setCardValue(&quot;leitor&quot;, &quot;&quot;);&#xd;
+	&#xd;
+	// Tratamento dos leitores&#xd;
+	var leitores 	 = hAPI.getCardValue(&quot;leitores&quot;);&#xd;
+	log.info(&quot;==========[ beforeStateEntry - ativLeitor - leitores ]========== &quot; + leitores);&#xd;
+	&#xd;
+	if (leitores != &apos;&apos;) {&#xd;
+		var arrayLeitores = [];&#xd;
+		arrayLeitores = leitores.split(&apos;,&apos;);&#xd;
+		log.info(&quot;==========[ beforeStateEntry - ativLeitor - arrayLeitores ]========== &quot; + arrayLeitores);&#xd;
+		&#xd;
+		var leitor = arrayLeitores[0];&#xd;
+		log.info(&quot;==========[ beforeStateEntry - ativLeitor - arrayLeitores[0] ]========== &quot; + leitor);&#xd;
+		hAPI.setCardValue(&quot;leitor&quot;,leitor);&#xd;
+		&#xd;
+		var qtd_arrayLeitores = arrayLeitores.length;&#xd;
+		log.info(&quot;==========[ beforeStateEntry - ativLeitor - qtd_arrayLeitores ]========== &quot; + qtd_arrayLeitores);&#xd;
+		&#xd;
+		var arrayLeitoresTemp = [];&#xd;
+		if ( qtd_arrayLeitores &gt; 1){ // Quando há mais de um usuário em cópia&#xd;
+			for (var i = 1; i &lt; qtd_arrayLeitores; i++ ) {&#xd;
+				arrayLeitoresTemp.push(arrayLeitores[i]);&#xd;
+			}&#xd;
+			log.info(&quot;==========[ beforeStateEntry - ativLeitor - arrayLeitoresTemp ]========== &quot; + arrayLeitoresTemp);&#xd;
+			hAPI.setCardValue(&quot;leitores&quot;,arrayLeitoresTemp);&#xd;
+		}&#xd;
+		else {// Quando há somente um usuário em cópia&#xd;
+			hAPI.setCardValue(&quot;leitores&quot;,&apos;&apos;);&#xd;
+		}&#xd;
+	}&#xd;
+}&#xd;
 &#xd;
 &#xd;
 //////////////////////////////////////////&#xd;
@@ -558,19 +806,18 @@ return dd +&apos;/&apos;+ mm +&apos;/&apos;+ aaaa +&apos; - &apos;+ horas +&apos
 //FUNCAO RETORNA O NOME COMPLETO CONFORME LOGIN 	//&#xd;
 //////////////////////////////////////////////////////&#xd;
 &#xd;
+&#xd;
 function nomeCompleto(login){&#xd;
 var usuario = login;&#xd;
 var datasetRetorno = DatasetFactory.getDataset(&quot;colleague&quot;, null, null, null); // Buscando Gestor de acordo com o colaborador&#xd;
 for (var i = 0; i &lt; datasetRetorno.rowsCount; i++) {&#xd;
-var usuario_fluig = datasetRetorno.getValue(i, &quot;login&quot;); &#xd;
-if (usuario_fluig == usuario){&#xd;
-var name_fluig = (datasetRetorno.getValue(i, &quot;colleagueName&quot;)).toUpperCase(); &#xd;
-}&#xd;
-}&#xd;
+	var usuario_fluig = datasetRetorno.getValue(i, &quot;login&quot;); &#xd;
+	if (usuario_fluig == usuario){&#xd;
+		var name_fluig = (datasetRetorno.getValue(i, &quot;colleagueName&quot;)).toUpperCase(); &#xd;
+		}&#xd;
+	}&#xd;
 return name_fluig;&#xd;
-}	&#xd;
-&#xd;
-&#xd;
+}&#xd;
 &#xd;
 &#xd;
 function ComplementoHistorico() {&#xd;
@@ -619,180 +866,45 @@ function ComplementoHistorico() {&#xd;
 	}&#xd;
 }&#xd;
 &#xd;
-&#xd;
-&#xd;
-&#xd;
-function GestorWorkflow() {&#xd;
-	try{&#xd;
-		&#xd;
-	  	//////////////////////////////////////////////////////////////////&#xd;
-	  	//	TRATANDO CAMPOS RELACIONADOS AO GESTOR E GESTOR ANTERIOR  	//&#xd;
-	  	//////////////////////////////////////////////////////////////////		&#xd;
-		&#xd;
-		log.info(&quot;==========[ GestorWorkflow - Expediente Digital - ENTROU ]==========&quot;);&#xd;
-		&#xd;
-		var gestor 				= hAPI.getCardValue(&quot;gestor&quot;);&#xd;
-		var gestorAnterior 		= hAPI.getCardValue(&quot;gestorAnterior&quot;);&#xd;
-		&#xd;
-		log.info(&quot;==========[ GestorWorkflow - Expediente Digital - gestor ]==========&quot;+gestor);&#xd;
-		log.info(&quot;==========[ GestorWorkflow - Expediente Digital - gestorAnterior ]==========&quot;+gestorAnterior);&#xd;
-		&#xd;
-		//Limpando campo colaborador&#xd;
-		hAPI.setCardValue(&quot;colaborador&quot;, &quot;&quot;);&#xd;
-		&#xd;
-		if (gestor != gestorAnterior) {&#xd;
-&#xd;
-			hAPI.setCardValue(&quot;gestorAnterior&quot;, gestor);&#xd;
-			hAPI.setCardValue(&quot;gestor&quot;, &quot;&quot;);&#xd;
-		}&#xd;
-&#xd;
-		else if (gestor == gestorAnterior) {&#xd;
-&#xd;
-			hAPI.setCardValue(&quot;gestor&quot;, &quot;&quot;);&#xd;
-		}&#xd;
-		&#xd;
-		&#xd;
-	}&#xd;
-	catch (e)&#xd;
-	{&#xd;
-		log.error(e);&#xd;
-		throw e;&#xd;
-	}&#xd;
+function ordernarLeitoresCopia(){&#xd;
+	log.info(&quot;==========[ expediente_digital.beforeStateEntry - ordernarLeitoresCopia - Entrou ] ========== &quot;);	&#xd;
 	&#xd;
-}&#xd;
-&#xd;
-&#xd;
-&#xd;
-function ColaboradorWorkflow() {&#xd;
-	try{&#xd;
-		&#xd;
-	  	//////////////////////////////////////////////////////////&#xd;
-	  	//	SE VAZIO, PREENCHENDO gertor COM gestorAnterior  	//&#xd;
-	  	//////////////////////////////////////////////////////////		&#xd;
-		&#xd;
-		log.info(&quot;==========[ ColaboradorWorkflow - Expediente Digital - ENTROU ]==========&quot;);&#xd;
-		&#xd;
-		var gestor 				= hAPI.getCardValue(&quot;gestor&quot;);&#xd;
-		var gestorAnterior 		= hAPI.getCardValue(&quot;gestorAnterior&quot;);&#xd;
-		&#xd;
-		//Limpando campo colaborador&#xd;
-		hAPI.setCardValue(&quot;colaborador&quot;, &quot;&quot;);&#xd;
-		&#xd;
-		//if (gestor == &quot;&quot;) {&#xd;
-		//	hAPI.setCardValue(&quot;gestor&quot;, gestorAnterior);&#xd;
-		//}&#xd;
-		&#xd;
-	}&#xd;
-	catch (e)&#xd;
-	{&#xd;
-		log.error(e);&#xd;
-		throw e;&#xd;
-	}&#xd;
+	var leitoresCopia = hAPI.getCardValue(&quot;leitoresCopia&quot;);&#xd;
+	log.info(&quot;==========[ expediente_digital.beforeStateEntry - ordernarLeitoresCopia - leitoresCopia ] ========== &quot;+leitoresCopia);&#xd;
 	&#xd;
-}&#xd;
-&#xd;
-&#xd;
-&#xd;
-function ProcessamentoWorkflow(){&#xd;
-	try {&#xd;
+	if ( leitoresCopia != &apos;&apos; ){&#xd;
+		leitoresCopia = leitoresCopia.split(&apos; , &apos;);&#xd;
 		&#xd;
-	  	//////////////////////////////////////////////////&#xd;
-	  	//			PREENCHENDO CAMPOS DO FORM.    		//&#xd;
-	  	//////////////////////////////////////////////////&#xd;
+		var qtd_leitoresCopia = leitoresCopia.length;&#xd;
+		log.info(&quot;==========[ expediente_digital.beforeStateEntry - ordernarLeitoresCopia - qtd_leitoresCopia ] ========== &quot;+qtd_leitoresCopia);&#xd;
 		&#xd;
-		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - ENTROU ]==========&quot;);&#xd;
-		&#xd;
-		var processo = getValue(&quot;WKNumProces&quot;);     			// Recupera o numero da solicitação&#xd;
-		var solicitante = getValue(&quot;WKUser&quot;);					// Recupera o usuário corrente associado a atividade&#xd;
-		var today = new Date().toISOString().slice(0,10);		// Capturando e formatando data corrente Ex: &apos;2021-09-15&apos;&#xd;
-		var gestorLogado = hAPI.getCardValue(&quot;gestorLogado&quot;);	// true é um gestor logado, false não é um, gestor logado&#xd;
-		var nome_Completo = nomeCompleto(solicitante);			// Função retorna o nome completo cadastrado no Fluig&#xd;
-		&#xd;
-		&#xd;
-		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - today ]========== &quot; + today);&#xd;
-		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - identificadorFluig ]========== &quot; + processo);&#xd;
-		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - solicitante ]========== &quot; + solicitante);&#xd;
-		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - gestorLogado ]========== &quot; + gestorLogado);&#xd;
-		hAPI.setCardValue(&quot;dataSolicitacao&quot;, today);&#xd;
-		hAPI.setCardValue(&quot;identificadorFluig&quot;, processo);&#xd;
-		hAPI.setCardValue(&quot;solicitante&quot;, solicitante);&#xd;
-		&#xd;
-		&#xd;
-		//Capturando função e lotação do usuário&#xd;
-		var consulta = DatasetFactory.createConstraint(&quot;CODUSUARIO&quot;, solicitante, solicitante, ConstraintType.MUST);&#xd;
-		var constraints = new Array(consulta);&#xd;
-		log.info(&quot;==========[ _RM_DADOS_COLABORADORES - constraints ]========== &quot; + constraints);&#xd;
-		&#xd;
-		// coleta dados do dataset, utlizando filtro&#xd;
-		var datasetRetorno = DatasetFactory.getDataset(&quot;_RM_DADOS_COLABORADORES&quot;, null, constraints, null);&#xd;
-		log.info(&quot;==========[ _RM_DADOS_COLABORADORES - datasetRetorno ] ========== &quot; + datasetRetorno);	&#xd;
-		&#xd;
-		var nomeSecao  = datasetRetorno.getValue(0, &quot;NOME_SECAO&quot;);&#xd;
-		var nomeFuncao = datasetRetorno.getValue(0, &quot;NOME_FUNCAO&quot;);&#xd;
-		&#xd;
-		&#xd;
-        //////////////////////////////////////////////////////////////////////////&#xd;
-        //		MOVIMENTANDO CONTEÚDO DE DESPACHO PARA DESPACHO HISTORICO		//&#xd;
-		//////////////////////////////////////////////////////////////////////////		&#xd;
-		&#xd;
-		var despacho = hAPI.getCardValue(&quot;despacho&quot;);&#xd;
-		// Formatando&#xd;
-		var dataFormatada = dataAtualFormatada(); &#xd;
-		var concatenando = &apos;Solicitante: &apos;+nome_Completo+&apos; \n Função: &apos;+nomeFuncao+&apos; \n Seção: &apos;+nomeSecao+&apos; \n Data: &apos;+dataFormatada+&apos; \n Despacho: &apos;+despacho;&#xd;
-		log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - historicoDespacho - concatenando ]========== &quot;+concatenando);&#xd;
-		hAPI.setCardValue(&quot;historicoDespacho&quot;, concatenando);&#xd;
-		// Esvaziando campo despacho&#xd;
-		hAPI.setCardValue(&quot;despacho&quot;, &quot;&quot;);&#xd;
-		&#xd;
-		/*&#xd;
-        //////////////////////////////////////////////////////////&#xd;
-        //		QUANDO FOR UM GESTOR QUE INICIOU O PROCESSO		//&#xd;
-        //////////////////////////////////////////////////////////&#xd;
-		&#xd;
-		if (gestorLogado == &quot;true&quot;) {&#xd;
-			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - IF-ENTROU (gestorLogado == true) ]========== &quot;);&#xd;
-			hAPI.setCardValue(&quot;gestorAnterior&quot;, solicitante);&#xd;
-			}&#xd;
-		&#xd;
-		&#xd;
-        //////////////////////////////////////////////////////////&#xd;
-        //	QUANDO FOR UM COLABORADOR QUE INICIOU O PROCESSO	//&#xd;
-        //////////////////////////////////////////////////////////		&#xd;
-		&#xd;
-		else if (gestorLogado == &quot;false&quot;) {&#xd;
+		if ( qtd_leitoresCopia &gt; 1 ) {&#xd;
+			leitoresCopia = leitoresCopia.sort(); // Ordenando a lista&#xd;
 			&#xd;
-			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - IF-ENTROU (gestorLogado == false) ]========== &quot;);&#xd;
-			var c1 = DatasetFactory.createConstraint(&quot;CODUSUARIO&quot;, solicitante, solicitante, ConstraintType.MUST);&#xd;
-			var constraints = new Array(c1);&#xd;
-			log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - constraints ]========== &quot;+constraints);&#xd;
-			var datasetRetorno = DatasetFactory.getDataset(&quot;_RM_FUNC_FILIAL_CUSTO&quot;, null, constraints, null); // Buscando Gestor de acordo com o colaborador&#xd;
-	        &#xd;
-			for (var i = 0; i &lt; datasetRetorno.rowsCount; i++) {&#xd;
-	        	var codUsuarioChefe = datasetRetorno.getValue(i, &quot;CODUSUARIO_CHEFE&quot;); &#xd;
-	        	log.info(&quot;==========[ ProcessamentoWorkflow - Expediente Digital - codUsuarioChefe ]========== &quot;+codUsuarioChefe);&#xd;
-	        	hAPI.setCardValue(&quot;gestor&quot;, codUsuarioChefe);&#xd;
+			var leitoresCopiaOrdenado = &apos;&apos;;&#xd;
+			for (var i= 0 ;i &lt; qtd_leitoresCopia; i++) {&#xd;
+				if (i==0) {&#xd;
+					leitoresCopiaOrdenado = leitoresCopia[i];&#xd;
 				}&#xd;
-			&#xd;
+				else {&#xd;
+					leitoresCopiaOrdenado = leitoresCopiaOrdenado+&apos; , &apos;+leitoresCopia[i];&#xd;
+				} &#xd;
 			}&#xd;
-			*/&#xd;
+			log.info(&quot;==========[ expediente_digital.beforeStateEntry - ordernarLeitoresCopia - leitoresCopiaOrdenado ] ========== &quot;+leitoresCopiaOrdenado);&#xd;
+			hAPI.setCardValue(&quot;leitoresCopia&quot;, leitoresCopiaOrdenado);&#xd;
 		}&#xd;
-	&#xd;
-	catch (e)&#xd;
-	{&#xd;
-		log.error(e);&#xd;
-		throw e;&#xd;
 	}&#xd;
+}&#xd;
 &#xd;
-&#xd;
-}</eventDescription>
+</eventDescription>
     </WorkflowProcessEvent>
   </list>
   <list/>
   <list>
     <SwimLane>
       <color>FFFF80</color>
-      <height>409</height>
-      <width>791</width>
+      <height>481</height>
+      <width>1021</width>
       <positionX>0</positionX>
       <positionY>0</positionY>
       <stateName>Expediente</stateName>
@@ -813,78 +925,89 @@ function ProcessamentoWorkflow(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>65</version>
-        <linkSequence>26</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>157</positionX>
-      <positionY>297</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>65</version>
-        <linkSequence>26</linkSequence>
-        <bendSequence>2</bendSequence>
-      </processLinkBendPK>
-      <positionX>157</positionX>
-      <positionY>125</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>65</version>
-        <linkSequence>30</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>153</positionX>
-      <positionY>125</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>expediente_digital</processId>
-        <version>65</version>
+        <version>10</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>330</positionX>
-      <positionY>41</positionY>
+      <positionX>223</positionX>
+      <positionY>61</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>65</version>
-        <linkSequence>32</linkSequence>
+        <version>10</version>
+        <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>693</positionX>
+      <positionX>795</positionX>
+      <positionY>18</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>10</version>
+        <linkSequence>36</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>792</positionX>
+      <positionY>113</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>10</version>
+        <linkSequence>41</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>620</positionX>
       <positionY>372</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>65</version>
-        <linkSequence>32</linkSequence>
+        <version>10</version>
+        <linkSequence>42</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>804</positionX>
+      <positionY>115</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>10</version>
+        <linkSequence>43</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>953</positionX>
+      <positionY>420</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>expediente_digital</processId>
+        <version>10</version>
+        <linkSequence>43</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
-      <positionX>160</positionX>
-      <positionY>372</positionY>
+      <positionX>67</positionX>
+      <positionY>420</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>65</version>
-        <linkSequence>32</linkSequence>
-        <bendSequence>3</bendSequence>
+        <version>10</version>
+        <linkSequence>44</linkSequence>
+        <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>160</positionX>
-      <positionY>126</positionY>
+      <positionX>618</positionX>
+      <positionY>196</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
@@ -897,38 +1020,18 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>5</stateSequence>
-      <appKey>approval</appKey>
-      <appField>title</appField>
-      <description>@[form:assunto]</description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>5</stateSequence>
-      <appKey>approval</appKey>
-      <appField>description</appField>
-      <description>@[form:historicoDespacho]</description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>5</stateSequence>
+      <processVersion>10</processVersion>
+      <stateSequence>28</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
-      <description>22</description>
+      <description>30</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>5</stateSequence>
+      <processVersion>10</processVersion>
+      <stateSequence>28</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
       <description>11</description>
@@ -937,62 +1040,87 @@ function ProcessamentoWorkflow(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>9</stateSequence>
-      <appKey>approval</appKey>
-      <appField>title</appField>
-      <description>@[form:assunto]</description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>9</stateSequence>
-      <appKey>approval</appKey>
-      <appField>description</appField>
-      <description>@[form:historicoDespacho]</description>
-    </ProcessAppConfiguration>
-    <ProcessAppConfiguration>
-      <id>0</id>
-      <tenantId>0</tenantId>
-      <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>9</stateSequence>
+      <processVersion>10</processVersion>
+      <stateSequence>34</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
-      <description>22</description>
+      <description>30</description>
     </ProcessAppConfiguration>
     <ProcessAppConfiguration>
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>65</processVersion>
-      <stateSequence>28</stateSequence>
+      <processVersion>10</processVersion>
+      <stateSequence>34</stateSequence>
       <appKey>approval</appKey>
-      <appField>approve</appField>
-      <description>22</description>
+      <appField>reject</appField>
+      <description>11</description>
     </ProcessAppConfiguration>
   </list>
   <list/>
   <list>
     <ConditionProcessAutomaticRules>
-      <sequence>22</sequence>
+      <sequence>30</sequence>
       <expressionOrder>1</expressionOrder>
       <ruleOrder>1</ruleOrder>
-      <field>gestor</field>
+      <field>grupo</field>
       <value></value>
       <operator>0</operator>
       <valueType>0</valueType>
     </ConditionProcessAutomaticRules>
     <ConditionProcessAutomaticRules>
-      <sequence>22</sequence>
-      <expressionOrder>2</expressionOrder>
-      <ruleOrder>1</ruleOrder>
-      <field>colaborador</field>
+      <sequence>30</sequence>
+      <expressionOrder>1</expressionOrder>
+      <ruleOrder>2</ruleOrder>
+      <field>leitor</field>
       <value></value>
       <operator>0</operator>
       <valueType>0</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>30</sequence>
+      <expressionOrder>2</expressionOrder>
+      <ruleOrder>1</ruleOrder>
+      <field>destinatario</field>
+      <value></value>
+      <operator>0</operator>
+      <valueType>0</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>30</sequence>
+      <expressionOrder>2</expressionOrder>
+      <ruleOrder>2</ruleOrder>
+      <field>leitor</field>
+      <value></value>
+      <operator>0</operator>
+      <valueType>0</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>30</sequence>
+      <expressionOrder>3</expressionOrder>
+      <ruleOrder>1</ruleOrder>
+      <field>leitor</field>
+      <value>&apos;&apos;</value>
+      <operator>2</operator>
+      <valueType>1</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>39</sequence>
+      <expressionOrder>1</expressionOrder>
+      <ruleOrder>1</ruleOrder>
+      <field>leitor</field>
+      <value></value>
+      <operator>0</operator>
+      <valueType>0</valueType>
+    </ConditionProcessAutomaticRules>
+    <ConditionProcessAutomaticRules>
+      <sequence>39</sequence>
+      <expressionOrder>2</expressionOrder>
+      <ruleOrder>1</ruleOrder>
+      <field>leitor</field>
+      <value>&apos;&apos;</value>
+      <operator>2</operator>
+      <valueType>1</valueType>
     </ConditionProcessAutomaticRules>
   </list>
 </list>

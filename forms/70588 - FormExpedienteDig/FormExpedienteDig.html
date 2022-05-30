@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
 	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
-	<script type="text/javascript" src="custom.js"></script>
 	<script src="/webdesk/vcXMLRPC.js"></script>
 
 
@@ -30,67 +29,92 @@
 							<div class="alert alert-danger" id="error" role="alert" style="display:none"></div>
 							<input type='hidden' name='usuarioCorrente' id='usuarioCorrente' />
 							<input type='hidden' name='solicitante' id='solicitante' />
-							<input type='hidden' name='gestorAnterior' id='gestorAnterior' />
 							<input type='hidden' name='dataSolicitacao' id='dataSolicitacao' />
 							<input type='hidden' name='identificadorFluig' id='identificadorFluig' />
-							<input type='hidden' name='gestorLogado' id='gestorLogado' />
+							<input type='hidden' name='leitor' id='leitor' />
 
 
-
-							<div class="row form-group" id="dvGestor">
-
-
+							<div class="row form-group" id="dvdestino">
 								<div class="panel-body">
 									<div class="alert alert alert-warning" role="alert">
-										<strong>Atenção!!</strong> Selecione um Gestor/Assessor ou um Empregado para
-										direcionar o expediente.
+										<strong>Atenção!!</strong> Selecione um Destinatário ou um Grupo para direcionar
+										o expediente.
 									</div>
 								</div>
-
 								<div class="col-xs-6 col-md-6">
-									<label class="control-label" id="lblGestor">Selecione um Gestor ou Assessor</label>
-									<input type="zoom" id="gestor" name="gestor" data-zoom="{
-											'displayKey':'CODUSUARIO_CHEFE',
-											'datasetId':'_RM_GESTORES',
-											'maximumSelectionLength':'1',
-											'fields':[
-												{
-												'field':'CHEFE',  
-												'label':'Gestor',
-												'standard':'true'
-												},{
-												'field':'CODUSUARIO_CHEFE',
-												'label':'Cod usuario'
-												}
-											]
-										}" />
+									<label class="control-label" id="lblDestinatario">Selecione um Destinatario</label>
+									<input type="zoom" id="destinatario" name="destinatario" data-zoom="{
+									'displayKey':'LOGIN',
+									'datasetId':'_FLUIG_USUARIOS',
+									'maximumSelectionLength':'1',
+									'fields':[
+										{
+										'field':'FULL_NAME',  
+										'label':'Nome',
+										'standard':'true'
+										},{
+										'field':'LOGIN',
+										'label':'login'
+										}
+									]
+								}" />
 								</div>
 
 								<div class="col-xs-6 col-md-6">
-									<label class="control-label" id="lblcolaborador">Selecione um Empregado </label>
-									<input type="zoom" id="colaborador" name="colaborador" data-zoom="{
-								'displayKey':'CODUSUARIO',
-								'datasetId':'_RM_COLABORADORES',
-								'maximumSelectionLength':'1',
-								'fields':[
-									{
-									  'field':'COLABORADOR',
-									  'label':'COLABORADOR'
-									},{
-									  'field':'CODUSUARIO',
-									  'label':'CODUSUARIO',
-									  'standard':'true'
-									}
-								]
-							}" />
+									<label class="control-label" id="lblGrupo">Selecione um Grupo</label>
+									<input type="zoom" id="grupo" name="grupo" data-zoom="{
+									'displayKey':'GROUP_CODE',
+									'datasetId':'_FLUIG_GRUPOS',
+									'maximumSelectionLength':'1',
+									'fields':[
+										{
+										'field':'DESCRIPTION',  
+										'label':'Descrição',
+										'standard':'true'
+										},{
+										'field':'GROUP_CODE',
+										'label':'Cod grupo'
+										}
+									]
+								}" />
 								</div>
+							</div>
 
+							<br>
+							<div class="row form-group" id="dvleitores">
+								<div class="col-xs-12 col-md-12">
+									<label class="control-label" id="lblLeitores">Selecione leitor(es) para
+										acompanhamento do expediente</label>
+									<input type="zoom" id="leitores" name="leitores" data-zoom="{
+										'displayKey':'LOGIN',
+										'datasetId':'_FLUIG_USUARIOS',
+										'maximumSelectionLength':'20',
+										'fields':[
+											{
+											'field':'FULL_NAME',  
+											'label':'Nome',
+											'standard':'true'
+											},{
+											'field':'LOGIN',
+											'label':'login'
+											}
+										]
+									}" />
+								</div>
 							</div>
 
 
+							<br>
+							<div class="row form-group" id="dvleitoresCopia">
+								<div class="col-xs-12 col-md-12">
+									<label class="control-label" id="lblleitoresCopia">Leitor(es) já em cópia</label>
+									<input class="form-control" type="text" id="leitoresCopia" name="leitoresCopia" />
+								</div>
+							</div>
+							<br>
 
-							<br><br>
 
+							<hr>
 
 							<div class="row form-group">
 								<div class="col-xs-12 col-md-12">
@@ -100,6 +124,49 @@
 							</div>
 
 							<div class="row form-group">
+								<div class="col-xs-12 col-md-12">
+									<label class="control-label" id="lblCategoria">Selecione uma categoria </label>
+									<input type="zoom" id="categoria" name="categoria" data-zoom="{
+										'displayKey':'CATEGORIA',
+										'datasetId':'_FLUIG_CAT_EXPEDIENTE',
+										'maximumSelectionLength':'1',
+										'fields':[
+											{
+											'field':'CATEGORIA',  
+											'label':'Categoria',
+											'standard':'true'
+											}
+										]
+									}" />
+								</div>
+							</div>
+
+							<div class="row form-group" id="dvfornecedor">
+								<div class="col-xs-12 col-md-12">
+									<label class="control-label" id="lblFornecedor">Selecione o fornecedor</label>
+									<input type="zoom" id="fornecedor" name="fornecedor" data-zoom="{
+										'displayKey':'COD_NOMEFANTASIA',
+										'datasetId':'_RM_FORNECEDOR',
+										'maximumSelectionLength':'1',
+										'fields':[
+											{
+											  'field':'CODCFO',
+											  'label':'Cod. Fornecedor'
+											},{
+											  'field':'NOMEFANTASIA',
+											  'label':'Nome Fantasia',
+											  'standard':'true'
+											},{
+											  'field':'NOME',
+											  'label':'Nome'
+											}
+										]
+									}" />
+								</div>
+							</div>
+
+
+							<div class="row form-group" id="dvdespacho">
 								<div class="col-xs-12 col-md-12">
 									<label class="control-label" id="lblDespacho">Despacho</label>
 									<textarea class="form-control" rows="10" name="despacho" id="despacho"></textarea>
@@ -131,37 +198,65 @@
 
 			function LoadForm() {
 				try {
+
 					// capturando usuario logado
 					var usuarioLogado = document.getElementById("usuarioCorrente").value;
 					usuarioLogado = usuarioLogado.toLowerCase();
 					//console.log("Form usuarioLogado: " + usuarioLogado);
 
-					// Preparacao de filtro para consulta
-					var c1 = DatasetFactory.createConstraint("CODUSUARIO_CHEFE", usuarioLogado, usuarioLogado, ConstraintType.MUST);
-					var constraints = new Array(c1);
-
-					var datasetGestor = DatasetFactory.getDataset("_RM_GESTORES", null, constraints, null); // Buscando dataset gestores
-					var rowsCount = datasetGestor.values.length;
-					//console.log("rowsCount: " + rowsCount);
-
-					// Verificando se o campo está editável ou não
-					var myElem = document.getElementById("despacho");
-					var tipo = myElem.getAttribute("type");
-					
-					// condicionando a chamada do filtro para não gerar erro na tela quando o expediente for consultado.
-					if ( tipo == null ) {
-						if (rowsCount > 0) {
-							$("#gestorLogado").val(true);
-							filtrazoomEmpregado(usuarioLogado);
-						}
-						else {
-							$("#gestorLogado").val(false);
-							filtrazoomGestorEmpregado(usuarioLogado);
-							filtrazoomEquipeEmpregado(usuarioLogado);
-						}
+					// Ocultando leitores em cópia quando o campo estiver vazio
+					var leitoresCopia = $("#leitoresCopia").val();
+					console.log("leitoresCopia: " + leitoresCopia);
+					if (leitoresCopia == '') {
+						$('#dvleitoresCopia').hide();
 					}
 
 
+					/* TRATANDO RELAÇÃO ENTRE OS CAMPOS CATEGORIA E FORNECEDOR */
+					// Habilitando o campo no momento do preenchimento
+					$(document).on('change', "#categoria", function () {
+
+						var categoriaCampo = $("#categoria").val();
+						console.log("categoriaCampo: " + categoriaCampo);
+						if (categoriaCampo == 'Contrato') {
+							$('#dvfornecedor').show();
+						}
+						else {
+							$('#dvfornecedor').hide();
+						}
+					});
+
+
+					/* TRATANDO RELAÇÃO ENTRE OS CAMPOS DESTINATÁRIO E GRUPO */
+
+					// Quando selecionar destinatario desabilitar grupo
+					$(document).on('change', "#destinatario", function () {
+						var destinatarioCampo = $("#destinatario").val();
+						console.log("destinatarioCampo: " + destinatarioCampo);
+						if (destinatarioCampo != '') {
+							var inputGrupo = document.querySelector("#grupo");
+							inputGrupo.disabled = true;
+						}
+						else {
+							var inputGrupo = document.querySelector("#grupo");
+							inputGrupo.disabled = false;
+						}
+
+					});
+
+					// Quando selecionar destinatario desabilitar grupo
+					$(document).on('change', "#grupo", function () {
+						var grupoCampo = $("#grupo").val();
+						console.log("grupoCampo: " + grupoCampo);
+						if (grupoCampo != '') {
+							var inputGrupo = document.querySelector("#destinatario");
+							inputGrupo.disabled = true;
+						}
+						else {
+							var inputGrupo = document.querySelector("#destinatario");
+							inputGrupo.disabled = false;
+						}
+					});
 
 
 				}
