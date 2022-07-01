@@ -38,7 +38,8 @@ function ativEncaminhar() {
 		// Tratando campo zoom com caracter especial 
 		// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 		leitoresString = String(leitores);
-	    var rege = new RegExp("[\u0018]", "g"); 
+		log.info("leitoresString: "  + leitoresString);
+		var rege = new RegExp("[\u0018]", "g"); 
 	    var leitoresNovo = leitoresString.replace(rege, " , ");
 	    log.info("leitoresNovo: "  + leitoresNovo);
 		

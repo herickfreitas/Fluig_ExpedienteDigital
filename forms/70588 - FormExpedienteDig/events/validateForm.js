@@ -10,6 +10,17 @@ function validateForm(form){
 	
 	log.info("FormExpedienteDig - validateForm - WKNumState "+activity);
 	
+	var destinatario = form.getValue('destinatario'); 
+	if (destinatario == null){
+		destinatario = "";
+	}
+	log.info("FormExpedienteDig - validateForm - destinatario "+destinatario);
+	
+	var grupo = form.getValue('grupo'); 
+	if (grupo == null ){
+		grupo = "";
+	}
+	log.info("FormExpedienteDig - validateForm - grupo "+grupo); 
 	
 	var msg = "";
 	var hasErros = false;
@@ -17,11 +28,7 @@ function validateForm(form){
 	
 	if (activity == inicioPadrao || activity == inicio) {
 
-		if (form.getValue('destinatario') == "" && form.getValue('grupo') == ""){
-			msg += "Selecione um destinatário ou um grupo.\n";
-			var hasErros = true;
-			}
-		if (form.getValue('destinatario') != "" && form.getValue('grupo') != ""){
+		if ( destinatario == "" && grupo == "" ){ 
 			msg += "Selecione um destinatário ou um grupo.\n";
 			var hasErros = true;
 			}
@@ -46,11 +53,7 @@ function validateForm(form){
 	}
 	
 	else if (activity == etapaGrupo || activity == etapaDestinatario){
-		if (form.getValue('destinatario') == "" && form.getValue('grupo') == ""){
-			msg += "Selecione um destinatário ou um grupo.\n";
-			var hasErros = true;
-			}
-		if (form.getValue('destinatario') != "" && form.getValue('grupo') != ""){
+		if ( destinatario == "" && grupo == "" ){ 
 			msg += "Selecione um destinatário ou um grupo.\n";
 			var hasErros = true;
 			}

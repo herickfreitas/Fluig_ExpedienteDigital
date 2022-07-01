@@ -10,12 +10,15 @@ function createDataset(fields, constraints, sortFields) {
       
     //Cria os registros
     dataset.addRow(new Array("Autorização de despesa"));
+    dataset.addRow(new Array("Consulta"));
     dataset.addRow(new Array("Contrato"));
     dataset.addRow(new Array("Correspondência interna"));
+    dataset.addRow(new Array("Parecer Legislativo"));
     dataset.addRow(new Array("PASPFE - Aquisição de sede prória"));
     dataset.addRow(new Array("Outros"));
 
-     
+    
+    
     return dataset;
 
 

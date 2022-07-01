@@ -30,7 +30,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Expediente Digital</processId>
-      <version>10</version>
+      <version>12</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -358,7 +358,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>10</version>
+        <version>12</version>
         <sequence>30</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -372,7 +372,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>10</version>
+        <version>12</version>
         <sequence>30</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -386,7 +386,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>3</expressionOrder>
-        <version>10</version>
+        <version>12</version>
         <sequence>30</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -400,7 +400,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>1</expressionOrder>
-        <version>10</version>
+        <version>12</version>
         <sequence>39</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -412,7 +412,7 @@
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
         <expressionOrder>2</expressionOrder>
-        <version>10</version>
+        <version>12</version>
         <sequence>39</sequence>
       </conditionProcessStatePK>
       <condition>false</condition>
@@ -675,7 +675,8 @@ function ativEncaminhar() {&#xd;
 		// Tratando campo zoom com caracter especial &#xd;
 		// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp&#xd;
 		leitoresString = String(leitores);&#xd;
-	    var rege = new RegExp(&quot;[\u0018]&quot;, &quot;g&quot;); &#xd;
+		log.info(&quot;leitoresString: &quot;  + leitoresString);&#xd;
+		var rege = new RegExp(&quot;[\u0018]&quot;, &quot;g&quot;); &#xd;
 	    var leitoresNovo = leitoresString.replace(rege, &quot; , &quot;);&#xd;
 	    log.info(&quot;leitoresNovo: &quot;  + leitoresNovo);&#xd;
 		&#xd;
@@ -925,7 +926,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>31</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -936,7 +937,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>35</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -947,7 +948,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>36</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -958,7 +959,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>41</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -969,7 +970,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>42</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -980,7 +981,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>43</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -991,7 +992,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>43</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1002,7 +1003,7 @@ function ordernarLeitoresCopia(){&#xd;
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>expediente_digital</processId>
-        <version>10</version>
+        <version>12</version>
         <linkSequence>44</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1020,7 +1021,7 @@ function ordernarLeitoresCopia(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>10</processVersion>
+      <processVersion>12</processVersion>
       <stateSequence>28</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1030,7 +1031,7 @@ function ordernarLeitoresCopia(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>10</processVersion>
+      <processVersion>12</processVersion>
       <stateSequence>28</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
@@ -1040,7 +1041,7 @@ function ordernarLeitoresCopia(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>10</processVersion>
+      <processVersion>12</processVersion>
       <stateSequence>34</stateSequence>
       <appKey>approval</appKey>
       <appField>approve</appField>
@@ -1050,7 +1051,7 @@ function ordernarLeitoresCopia(){&#xd;
       <id>0</id>
       <tenantId>0</tenantId>
       <processId>expediente_digital</processId>
-      <processVersion>10</processVersion>
+      <processVersion>12</processVersion>
       <stateSequence>34</stateSequence>
       <appKey>approval</appKey>
       <appField>reject</appField>
